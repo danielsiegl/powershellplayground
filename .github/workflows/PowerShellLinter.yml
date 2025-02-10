@@ -1,3 +1,4 @@
+name: Powershell Linter on Ubuntu
 on:
    push:
 jobs:
