@@ -2,7 +2,7 @@
 # and returns them as an array of objects
 
 # PSScriptAnalyzer rule suppression
-# SuppressMessage("PSUseSingularNouns", "Function returns a collection of holidays")
+# pragma warning disable PSUseSingularNouns
 function Get-AustrianBankHolidays {
     param (
         [Parameter(Mandatory=$true)]
