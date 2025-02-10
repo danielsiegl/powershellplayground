@@ -1,5 +1,5 @@
 # Load the functions and class to be tested
-Import-Module ./person.psm1 -Verbose
+using module "./../person.psm1"
 
 Describe "Person Class" {
     Context "When creating a new Person object" {

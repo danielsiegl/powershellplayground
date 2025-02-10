@@ -1,4 +1,3 @@
-# Define the Person class
 class Person {
     [string]$FirstName
     [string]$LastName
@@ -10,14 +9,15 @@ class Person {
         $this.Age = $age
     }
 
-    [void] SaveToFile([string]$FilePath) {
+    [void] SaveToFile([string]$filePath) {
         $json = $this | ConvertTo-Json
-        Set-Content -Path $FilePath -Value $json
+        Set-Content -Path $filePath -Value $json
     }
 
-    static [Person] LoadFromFile([string]$FilePath) {
-        $json = Get-Content -Path $FilePath -Raw
-        $person = $json | ConvertFrom-Json
-        return [Person]::new($person.FirstName, $person.LastName, $person.Age)
+    static [Person] LoadFromFile([string]$filePath) {
+        $json = Get-Content -Path $filePath
+        return $json | ConvertFrom-Json -AsHashtable | ForEach-Object {
+            [Person]::new($_.FirstName, $_.LastName, $_.Age)
+        }
     }
 }
