@@ -1,13 +1,9 @@
 function Get-AustrianBankHolidays {
-    # param (
-    #     [Parameter(Mandatory=$true)]
-    #     [string]$StartDate,
-
-    #     [Parameter(Mandatory=$true)]
-    #     [string]$EndDate
-    # )
     param (
+        [Parameter(Mandatory=$true)]
         [string]$StartDate,
+
+        [Parameter(Mandatory=$true)]
         [string]$EndDate
     )
     
