@@ -6,7 +6,7 @@ function Get-AustrianBankHolidays {
         [Parameter(Mandatory=$true)]
         [string]$EndDate
     )
-    
+
     Write-Output "Getting Austrian bank holidays from $StartDate to $EndDate"
     $url = "https://openholidaysapi.org/PublicHolidays?countryIsoCode=AT&languageIsoCode=DE&validFrom=$StartDate&validTo=$EndDate"
     Write-Output $url
@@ -16,7 +16,7 @@ function Get-AustrianBankHolidays {
         Write-Error "Failed to retrieve data from API: $_"
         return
     }
-
+    
     $holidayArray = @()
     $response | ForEach-Object {
         $holidayObject = [PSCustomObject]@{
