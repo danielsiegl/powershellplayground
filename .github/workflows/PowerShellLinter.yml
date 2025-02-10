@@ -18,7 +18,28 @@ jobs:
           $errors   = $issues.Where({$_.Severity -eq 'Error'})
           $warnings = $issues.Where({$_.Severity -eq 'Warning'})
           if ($errors) {
-              Write-Error "There were $($errors.Count) errors and $($warnings.Count) warnings total." -ErrorAction Stop
+              Write-Error "There were $($errors.Count) errors and $($warnings.Count) warnings total."  >> $GITHUB_STEP_SUMMARY
           } else {
-              Write-Output "There were $($errors.Count) errors and $($warnings.Count) warnings total."
+              Write-Output "There were $($errors.Count) errors and $($warnings.Count) warnings total." >> $GITHUB_STEP_SUMMARY
+          }
+
+          # Format issues into a markdown table
+          $markdownTable = @"
+          | Severity | Line | Message |
+          |----------|------|---------|
+          "@
+
+          foreach ($issue in $issues) {
+            $markdownTable += "| $($issue.Severity) | $($issue.Line) | $($issue.Message) |`n"
+          }
+
+          # Output the markdown table to the step summary
+          Write-Output $markdownTable >> $GITHUB_STEP_SUMMARY
+
+          # Fail the build if there are any errors in the script files
+          if ($errors) {
+              Write-Error "Errors found in script files."
+              exit 1
+          } else {
+              Write-Output "No errors found in script files."
           }
