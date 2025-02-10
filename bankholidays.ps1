@@ -1,3 +1,8 @@
+# this function retrieves Austrian bank holidays from openholidaysapi.org
+# and returns them as an array of objects
+
+# PSScriptAnalyzer rule suppression
+# SuppressMessage("PSUseSingularNouns", "Function returns a collection of holidays")
 function Get-AustrianBankHolidays {
     param (
         [Parameter(Mandatory=$true)]
@@ -7,25 +12,24 @@ function Get-AustrianBankHolidays {
         [string]$EndDate
     )
 
-    Write-Output "Getting Austrian bank holidays from $StartDate to $EndDate"
+    Write-Output "Getting Austrian bank holidays from $StartDate to $EndDate from openholidaysapi.org"
     $url = "https://openholidaysapi.org/PublicHolidays?countryIsoCode=AT&languageIsoCode=DE&validFrom=$StartDate&validTo=$EndDate"
-    Write-Output $url
+    Write-Debug $url
     try {
         $response = Invoke-RestMethod -Uri $url -Method Get
     } catch {
         Write-Error "Failed to retrieve data from API: $_"
         return
     }
-    
+
     $holidayArray = @()
     $response | ForEach-Object {
         $holidayObject = [PSCustomObject]@{
-            StartDate = [DateTime]::ParseExact($_.startDate, "yyyy-MM-dd", $null)
-            EndDate   = [DateTime]::ParseExact($_.endDate, "yyyy-MM-dd", $null)
+            Date = [DateTime]::ParseExact($_.startDate, "yyyy-MM-dd", $null)
             Name      = $_.name.text
         }
         $holidayArray += $holidayObject
-        Write-Output "$($_.startDate) - $($_.endDate) - $($_.name.text)"
+        Write-Debug "$($_.Date) - $($_.name.text)"
     }
     return $holidayArray
 }

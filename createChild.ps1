@@ -26,9 +26,10 @@ $endDateString = $endDate.ToString("yyyy-MM-dd")
 $holidayArray = Get-AustrianBankHolidays -StartDate $startDateString -EndDate $endDateString
 
 # Output the array to verify
+Write-Output "Holidays in 2025:"
 Write-Output $holidayArray
 
-Write-Output "Holidays in 2025:"
+
 
 # Define an array to hold the data
 $daysArray = @()
@@ -40,7 +41,7 @@ while ($currentDate -le $endDate) {
     $holidayName = ""
 
     foreach ($holiday in $holidayArray) {
-        if ($currentDate.Date -eq $holiday.StartDate.Date) {
+        if ($currentDate.Date -eq $holiday.Date.Date) {
             $isHoliday = $true
             $holidayName = $holiday.Name
             break
@@ -59,9 +60,9 @@ while ($currentDate -le $endDate) {
     $daysArray += $dayInfo
 
     if ($isHoliday) {
-        Write-Output "$($currentDate.ToString('yyyy-MM-dd')) - $dayOfWeek - Holiday: $holidayName"
+        Write-Debug "$($currentDate.ToString('yyyy-MM-dd')) - $dayOfWeek - Holiday: $holidayName"
     } else {
-        Write-Output "$($currentDate.ToString('yyyy-MM-dd')) - $dayOfWeek - Regular day"
+        Write-Debug "$($currentDate.ToString('yyyy-MM-dd')) - $dayOfWeek - Regular day"
     }
 
     $currentDate = $currentDate.AddDays(1)
