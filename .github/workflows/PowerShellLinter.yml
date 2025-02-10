@@ -25,16 +25,18 @@ jobs:
 
           # Format issues into a markdown table
           $markdownTable = @"
-          | Severity | Line | Message |
-          |----------|------|---------|
+          | Severity | RuleName | ScriptName | Line | Message |
+          |----------|------|------|------|---------|`n
           "@
 
           foreach ($issue in $issues) {
-            $markdownTable += "| $($issue.Severity) | $($issue.Line) | $($issue.Message) |`n"
+              $markdownTable += "| $($issue.Severity) |$($issue.RuleName) | $($issue.ScriptName) |$($issue.Line) | $($issue.Message) |`n"
           }
 
           # Output the markdown table to the step summary
+          Write-Output $markdownTable
           Write-Output $markdownTable >> $GITHUB_STEP_SUMMARY
+          $markdownTable | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
 
           # Fail the build if there are any errors in the script files
           if ($errors) {
