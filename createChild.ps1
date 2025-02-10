@@ -1,7 +1,7 @@
-if (Test-Path "./person.ps1") {
-    . ./person.ps1
+if (Test-Path "./person.psm1") {
+    Import-Module ./person.psm1 -Verbose
 } else {
-    Write-Error "The file 'person.ps1' was not found."
+    Write-Error "The module 'person.psm1' was not found."
     exit 1
 }
 
@@ -14,10 +14,12 @@ if (Test-Path "./bankholidays.ps1") {
 
 # Example usage
 $person = [Person]::new("John", "Doe", 30)
-Save-PersonToFile -Person $person -FilePath "person.json"
-$loadedPerson = Load-PersonFromFile -FilePath "person.json"
-Write-Output $loadedPerson.FirstName
 
+$person.SaveToFile("person.json")
+#Save-PersonToFile -Person $person -FilePath "person.json"
+$loadedPerson =[Person].LoadFromFile("person.json")
+Write-Output $loadedPerson.FirstName
+exit
 $startDate = Get-Date -Year 2025 -Month 1 -Day 1
 $endDate = Get-Date -Year 2025 -Month 12 -Day 31
 $startDateString = $startDate.ToString("yyyy-MM-dd")

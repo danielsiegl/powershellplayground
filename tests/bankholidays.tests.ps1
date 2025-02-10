@@ -1,4 +1,3 @@
-
 # Load the function to be tested
 .   "$PSScriptRoot/../bankholidays.ps1"
 Describe "Get-AustrianBankHolidays" {
@@ -15,11 +14,11 @@ Describe "Get-AustrianBankHolidays" {
             }
 
             $result = Get-AustrianBankHolidays -StartDate "2023-01-01" -EndDate "2023-12-31"
-            #$result | Should BeOfType 'System.Object[]'
-            $result.Count | Should Be 3
-            $result[0].Name | Should Be "Neujahr"
-            $result[1].Name | Should Be "Staatsfeiertag"
-            $result[2].Name | Should Be "Weihnachten"
+            $result | Should -BeOfType 'System.Object[]'
+            $result.Count | Should -Be 3
+            $result[0].Name | Should -Be "Neujahr"
+            $result[1].Name | Should -Be "Staatsfeiertag"
+            $result[2].Name | Should -Be "Weihnachten"
         }
     }
 
