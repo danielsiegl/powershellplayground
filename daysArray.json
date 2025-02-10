@@ -1,0 +1,2192 @@
+[
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "Neujahr",
+    "IsHoliday": true,
+    "Date": "2025-01-01"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-02"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-03"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-04"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-05"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "Heilige drei Könige",
+    "IsHoliday": true,
+    "Date": "2025-01-06"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-07"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-08"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-09"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-10"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-11"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-12"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-13"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-14"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-15"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-16"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-17"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-18"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-19"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-20"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-21"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-22"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-23"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-24"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-25"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-26"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-27"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-28"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-29"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-30"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-01-31"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-01"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-02"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-03"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-04"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-05"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-06"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-07"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-08"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-09"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-10"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-11"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-12"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-13"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-14"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-15"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-16"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-17"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-18"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-19"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-20"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-21"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-22"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-23"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-24"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-25"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-26"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-27"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-02-28"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-01"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-02"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-03"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-04"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-05"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-06"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-07"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-08"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-09"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-10"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-11"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-12"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-13"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-14"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-15"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-16"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-17"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-18"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-19"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-20"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-21"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-22"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-23"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-24"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-25"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-26"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-27"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-28"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-29"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-30"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-03-31"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-01"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-02"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-03"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-04"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-05"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-06"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-07"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-08"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-09"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-10"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-11"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-12"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-13"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-14"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-15"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-16"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-17"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-18"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-19"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-20"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "Ostermontag",
+    "IsHoliday": true,
+    "Date": "2025-04-21"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-22"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-23"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-24"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-25"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-26"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-27"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-28"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-29"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-04-30"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "Staatsfeiertag",
+    "IsHoliday": true,
+    "Date": "2025-05-01"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-02"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-03"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-04"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-05"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-06"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-07"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-08"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-09"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-10"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-11"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-12"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-13"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-14"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-15"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-16"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-17"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-18"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-19"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-20"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-21"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-22"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-23"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-24"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-25"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-26"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-27"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-28"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "Christi Himmelfahrt",
+    "IsHoliday": true,
+    "Date": "2025-05-29"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-30"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-05-31"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-01"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-02"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-03"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-04"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-05"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-06"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-07"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-08"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "Pfingstmontag",
+    "IsHoliday": true,
+    "Date": "2025-06-09"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-10"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-11"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-12"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-13"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-14"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-15"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-16"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-17"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-18"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "Fronleichnam",
+    "IsHoliday": true,
+    "Date": "2025-06-19"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-20"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-21"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-22"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-23"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-24"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-25"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-26"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-27"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-28"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-29"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-06-30"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-01"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-02"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-03"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-04"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-05"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-06"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-07"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-08"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-09"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-10"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-11"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-12"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-13"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-14"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-15"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-16"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-17"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-18"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-19"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-20"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-21"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-22"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-23"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-24"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-25"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-26"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-27"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-28"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-29"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-30"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-07-31"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-01"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-02"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-03"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-04"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-05"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-06"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-07"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-08"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-09"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-10"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-11"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-12"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-13"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-14"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "Mariä Himmelfahrt",
+    "IsHoliday": true,
+    "Date": "2025-08-15"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-16"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-17"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-18"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-19"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-20"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-21"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-22"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-23"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-24"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-25"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-26"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-27"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-28"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-29"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-30"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-08-31"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-01"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-02"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-03"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-04"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-05"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-06"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-07"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-08"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-09"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-10"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-11"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-12"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-13"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-14"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-15"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-16"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-17"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-18"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-19"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-20"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-21"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-22"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-23"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-24"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-25"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-26"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-27"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-28"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-29"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-09-30"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-01"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-02"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-03"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-04"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-05"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-06"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-07"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-08"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-09"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-10"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-11"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-12"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-13"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-14"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-15"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-16"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-17"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-18"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-19"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-20"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-21"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-22"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-23"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-24"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-25"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "Nationalfeiertag",
+    "IsHoliday": true,
+    "Date": "2025-10-26"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-27"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-28"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-29"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-30"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-10-31"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "Allerheiligen",
+    "IsHoliday": true,
+    "Date": "2025-11-01"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-02"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-03"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-04"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-05"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-06"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-07"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-08"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-09"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-10"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-11"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-12"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-13"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-14"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-15"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-16"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-17"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-18"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-19"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-20"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-21"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-22"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-23"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-24"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-25"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-26"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-27"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-28"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-29"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-11-30"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-01"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-02"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-03"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-04"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-05"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-06"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-07"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "Mariä Empfängnis",
+    "IsHoliday": true,
+    "Date": "2025-12-08"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-09"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-10"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-11"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-12"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-13"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-14"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-15"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-16"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-17"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-18"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-19"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-20"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-21"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-22"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-23"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-24"
+  },
+  {
+    "DayOfWeek": 4,
+    "HolidayName": "Christtag",
+    "IsHoliday": true,
+    "Date": "2025-12-25"
+  },
+  {
+    "DayOfWeek": 5,
+    "HolidayName": "Stefanitag",
+    "IsHoliday": true,
+    "Date": "2025-12-26"
+  },
+  {
+    "DayOfWeek": 6,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-27"
+  },
+  {
+    "DayOfWeek": 0,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-28"
+  },
+  {
+    "DayOfWeek": 1,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-29"
+  },
+  {
+    "DayOfWeek": 2,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-30"
+  },
+  {
+    "DayOfWeek": 3,
+    "HolidayName": "",
+    "IsHoliday": false,
+    "Date": "2025-12-31"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "Monday": {
+    "Start": "09:00 AM",
+    "End": "05:00 PM"
+  },
+  "Tuesday": {
+    "Start": "09:00 AM",
+    "End": "05:00 PM"
+  },
+  "Wednesday": {
+    "Start": "09:00 AM",
+    "End": "05:00 PM"
+  },
+  "Thursday": {
+    "Start": "09:00 AM",
+    "End": "05:00 PM"
+  },
+  "Friday": {
+    "Start": "09:00 AM",
+    "End": "04:00 PM"
+  }
+}
