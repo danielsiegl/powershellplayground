@@ -20,7 +20,6 @@ function Save-PersonToFile {
 
     $json = $Person | ConvertTo-Json
     # Function to load a Person object from disk
-    
     Set-Content -Path $FilePath -Value $json
 }
 

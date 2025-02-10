@@ -18,9 +18,9 @@ jobs:
           $errors   = $issues.Where({$_.Severity -eq 'Error'})
           $warnings = $issues.Where({$_.Severity -eq 'Warning'})
           if ($errors) {
-              Write-Error "There were $($errors.Count) errors and $($warnings.Count) warnings total."  >> $GITHUB_STEP_SUMMARY
+              Write-Error "There were $($errors.Count) errors and $($warnings.Count) warnings total."
           } else {
-              Write-Output "There were $($errors.Count) errors and $($warnings.Count) warnings total." >> $GITHUB_STEP_SUMMARY
+              Write-Output "There were $($errors.Count) errors and $($warnings.Count) warnings total."
           }
 
           # Format issues into a markdown table
@@ -34,8 +34,8 @@ jobs:
           }
 
           # Output the markdown table to the step summary
-          Write-Output $markdownTable
-          Write-Output $markdownTable >> $GITHUB_STEP_SUMMARY
+          # Write-Output $markdownTable
+          # Write-Output $markdownTable >> $GITHUB_STEP_SUMMARY
           $markdownTable | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
 
           # Fail the build if there are any errors in the script files
