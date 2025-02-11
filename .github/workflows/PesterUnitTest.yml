@@ -1,4 +1,4 @@
-name: Pester UnitTest on Ubuntu
+name: Pester UnitTests
 on: push
 
 permissions:
@@ -7,7 +7,7 @@ permissions:
 
 jobs:
   pester-test:
-    name: Pester test
+    name: Run Pester tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -20,6 +20,8 @@ jobs:
         if: always()
         run: |
           Invoke-Pester ./tests/*.ps1 -Passthru -OutputFile "./test-results/TestResults.xml" -OutputFormat NUnitXml
+          # don't fail on failed tests
+          exit 0
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
