@@ -9,32 +9,18 @@ jobs:
   pester-test:
     name: Pester test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: pwsh
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-
-      - name: Perform a Pester test from the command-line
-        if: always()
-        shell: pwsh
-        run: |
-          # Get-ChildItem -Path . -Recurse 
-          Test-Path ./person.psm1 | Should -Be $true
-          Test-Path ./tests/person.tests.ps1 | Should -Be $true
-          Test-Path ./bankholidays.psm1 | Should -Be $true
-          Test-Path ./tests/bankholidays.tests.ps1 | Should -Be $true
       
       - name: Perform a Pester Tests
         if: always()
-        shell: pwsh
         run: |
           Invoke-Pester ./tests/*.ps1 -Passthru -OutputFile "./test-results/TestResults.xml" -OutputFormat NUnitXml
-      
-      # - name: Perform a Pester test from the bankhoildays.tests.ps1 file
-      #   if: always()  
-      #   shell: pwsh
-      #   run: |
-      #     Invoke-Pester ./tests/bankhoildays.tests.ps1 -Passthru -OutputFile "./test-results/TestResults-bankhoildays.xml" -OutputFormat NUnitXml
-      
+
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
