@@ -12,16 +12,16 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-        
+
       - name: Perform a Pester test from the command-line
         if: always()
         shell: pwsh
         run: |
-          Get-ChildItem -Path . -Recurse 
+          # Get-ChildItem -Path . -Recurse 
           Test-Path ./person.psm1 | Should -Be $true
-          # Test-Path ./tests/person.tests.ps1 | Should -Be $true
-          # Test-Path ./bankholidays.ps1 | Should -Be $true
-          # Test-Path ./tests/bankholidays.tests.ps1 | Should -Be $true
+          Test-Path ./tests/person.tests.ps1 | Should -Be $true
+          Test-Path ./bankholidays.psm1 | Should -Be $true
+          Test-Path ./tests/bankholidays.tests.ps1 | Should -Be $true
       
       - name: Perform a Pester test from the person.tests.ps1 file 
         if: always()

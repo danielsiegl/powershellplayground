@@ -11,18 +11,18 @@ $loadedPerson =[Person]::LoadFromFile("person.json")
 Write-Output $loadedPerson.FirstName
 
 
-exit
-# $startDate = Get-Date -Year 2025 -Month 1 -Day 1
-# $endDate = Get-Date -Year 2025 -Month 12 -Day 31
-# $startDateString = $startDate.ToString("yyyy-MM-dd")
-# $endDateString = $endDate.ToString("yyyy-MM-dd")
+$startDate = Get-Date -Year 2025 -Month 1 -Day 1
+$endDate = Get-Date -Year 2025 -Month 12 -Day 31
+$startDateString = $startDate.ToString("yyyy-MM-dd")
+$endDateString = $endDate.ToString("yyyy-MM-dd")
 
-# $holidayArray = Get-AustrianBankHolidays -StartDate $startDateString -EndDate $endDateString
+$holidayArray = Get-AustrianBankHolidays -StartDate $startDateString -EndDate $endDateString
 
-# # Output the array to verify
-# Write-Output "Holidays in 2025:"
-# Write-Output $holidayArray
+# Output the array to verify
+Write-Output "Holidays in 2025:"
+Write-Output $holidayArray
 
+exit 0
 
 
 # # Define an array to hold the data
