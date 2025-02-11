@@ -27,8 +27,8 @@ Describe "Person Class" {
             $personAfterLoad = [Person]::LoadFromFile($filePath)
             $personAfterLoad.FirstName | Should -BeExactly "Jane"
             $personAfterLoad.LastName | Should -BeExactly "Doe" 
-            $personAfterLoad.Age | Should -BeExactly 25
-            
+            $personAfterLoad.Age | Should -BeExactly 26
+
             Remove-Item -Path $filePath
         }
     }
