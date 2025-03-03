@@ -1,5 +1,7 @@
 
 # This script is used to lint PowerShell scripts using PSScriptAnalyzer.
+# It checks if PSScriptAnalyzer is installed, installs it if not, and then
+# runs the analysis on all PowerShell scripts in the current directory and
 
 # Check if PSScriptAnalyzer is installed, if not install it.
 if (-not (Get-Module -ListAvailable -Name PSScriptAnalyzer)) {
@@ -26,6 +28,7 @@ $markdownTable = @"
 
 foreach ($issue in $issues) {
     $markdownTable += "| $($issue.Severity) | $($issue.Line) | $($issue.Message) |`n"
+
 }
 
 
