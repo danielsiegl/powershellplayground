@@ -5,19 +5,19 @@
     "Age": 2
   },
   "Schedule": {
-    "Thursday": {
-      "Start": "09:00 AM",
-      "End": "05:00 PM"
-    },
     "Tuesday": {
       "Start": "09:00 AM",
       "End": "05:00 PM"
     },
-    "Monday": {
+    "Thursday": {
       "Start": "09:00 AM",
       "End": "05:00 PM"
     },
     "Wednesday": {
+      "Start": "09:00 AM",
+      "End": "05:00 PM"
+    },
+    "Monday": {
       "Start": "09:00 AM",
       "End": "05:00 PM"
     }
