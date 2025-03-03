@@ -49,12 +49,6 @@ $holidayArray = Get-AustrianBankHolidays -StartDate $startDateString -EndDate $e
 
 Write-Output "Feiertage $($holidayArray.Count)"
 
-# Define an array to hold the data
-$daysArray = @()
-
-# Call the function to get the days information
-$daysArray = Get-DaysInfo -startDate $startDate -endDate $endDate -holidayArray $holidayArray
-
 # Initialize an array to hold workdays
 [Workday[]]$workdays = @()
 
@@ -66,7 +60,7 @@ while ($currentDate -le $endDate) {
 
     # Check if the current day is a holiday
     $isHoliday = $false
-    $holidayName = ""
+
     foreach ($holiday in $holidayArray) {
         if ($currentDate.Date -eq $holiday.Date.Date) {
             $isHoliday = $true
