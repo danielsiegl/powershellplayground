@@ -25,7 +25,7 @@ class Person {
     static [Person] LoadFromFile([string]$filePath) {
         $json = Get-Content -Path $filePath
         return $json | ConvertFrom-Json -AsHashtable | ForEach-Object {
-            [Person]::new($_.FirstName, $_.LastName, $_.Age)
+            [Person]::new($_.FirstName, $_.LastName, $_.MorningCostPerHour, $_.MorningGovSubsidyPerHour, $_.AfternoonCostPerHour, $_.AfternoonGovSubsidyPerHour)
         }
     }
 }

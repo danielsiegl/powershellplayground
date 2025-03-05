@@ -33,7 +33,6 @@ Describe "Get-AustrianBankHolidays" {
            
             $result = Get-AustrianBankHolidays -StartDate "2023-01-01" -EndDate "2023-12-31"
             $result.Count | Should -Be 15
-
             # $result[0] | Should -BeOfType HoliDayClass
         }
     }
