@@ -72,11 +72,30 @@ while ($currentDate -le $endDate) {
     # Check if the day is in the schedule and is not a holiday
     if ($Child.Schedule.Contains("$dayOfWeek") -and -not $isHoliday) {
         # Create a Workday object for the workday
+
+        $dailySchedule = $child.Schedule[$dayOfWeek.ToString()]
+        $start = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.Start)", 'yyyy-MM-dd hh:mm tt', $null)
+        $end = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.End)", 'yyyy-MM-dd hh:mm tt', $null)
+
+        Write-Output "Start: $start - End: $end"
+
+       
+        $morningRate = 6
+        $afternoonRate = 5
+        $morningGovSubsidy = 4.5
+        $afternoonGovSubsidy = 0
+
+        $costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
+
+
         $workday = [Workday]::new(
             $currentDate.ToString('yyyy-MM-dd'),
             $dayOfWeek.ToString(),
             $child.Schedule[$dayOfWeek.ToString()].Start,
-            $child.Schedule[$dayOfWeek.ToString()].End
+            $child.Schedule[$dayOfWeek.ToString()].End,
+            $costWindow.GetTotalCost(),
+            $costWindow.GetTotalSubsidy()
+
         )
         # Add the workday to the array
         $workdays += $workday
@@ -86,6 +105,8 @@ while ($currentDate -le $endDate) {
     $currentDate = $currentDate.AddDays(1)
 }
 
+
+
 # Group workdays by month and convert to JSON-friendly format
 $workdaysByMonthForJson = $workdays |
     Group-Object { (Get-Date $_.Date).ToString('yyyy-MM') } |
@@ -93,6 +114,8 @@ $workdaysByMonthForJson = $workdays |
         [PSCustomObject]@{
             Month = $_.Name
             Count = $_.Count
+            TotalCost = ($_.Group | Measure-Object -Property TotalCost -Sum).Sum
+            TotalSubsidy = ($_.Group | Measure-Object -Property TotalSubsidy -Sum).Sum
         }
     }
 

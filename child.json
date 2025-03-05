@@ -12,15 +12,15 @@
       "Start": "08:00 AM",
       "End": "03:00 PM"
     },
-    "Tuesday": {
-      "Start": "08:00 AM",
-      "End": "03:00 PM"
-    },
     "Monday": {
       "Start": "08:00 AM",
       "End": "03:00 PM"
     },
     "Thursday": {
+      "Start": "08:00 AM",
+      "End": "03:00 PM"
+    },
+    "Tuesday": {
       "Start": "08:00 AM",
       "End": "03:00 PM"
     }
