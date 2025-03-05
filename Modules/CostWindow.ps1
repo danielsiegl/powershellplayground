@@ -30,13 +30,29 @@ class CostWindow {
 }
 
 # Example usage:
+#morning cost
 $start = [DateTime]::Parse("2025-03-05 08:00")
-$end = [DateTime]::Parse("2025-03-05 12:00")
-$parentCostPerHour = 10.00
-$governmentCostPerHour = 5.50
+$end = [DateTime]::Parse("2025-03-05 13:00")
+$parentCostPerHour = 1.50
+$governmentCostPerHour = 4.50
+$MorningCost = [CostWindow]::new($start, $end, $parentCostPerHour, $governmentCostPerHour)
 
-$window = [CostWindow]::new($start, $end, $parentCostPerHour, $governmentCostPerHour)
+#afternoon cost
+$start = [DateTime]::Parse("2025-03-05 13:00")
+$end = [DateTime]::Parse("2025-03-05 15:00")
+$parentCostPerHour = 5.00
+$governmentCostPerHour = 0.00
+$AfternoonCost = [CostWindow]::new($start, $end, $parentCostPerHour, $governmentCostPerHour)
 
-Write-Output "Total Parent Cost: $($window.GetTotalParentCost())"
-Write-Output "Total Government Cost: $($window.GetTotalGovernmentCost())"
-Write-Output "Total Cost: $($window.GetTotalCost())"
+$overallParentCost = $MorningCost.GetTotalParentCost() + $AfternoonCost.GetTotalParentCost()
+$overallGovernmentCost = $MorningCost.GetTotalGovernmentCost() + $AfternoonCost.GetTotalGovernmentCost()
+$overallTotalCost = $MorningCost.GetTotalCost() + $AfternoonCost.GetTotalCost()
+
+Write-Output "Morning Parent Cost: $($MorningCost.GetTotalParentCost())"
+Write-Output "Morning Government Cost: $($MorningCost.GetTotalGovernmentCost())"
+Write-Output "Afternoon Parent Cost: $($AfternoonCost.GetTotalParentCost())"
+Write-Output "*************************************************************"
+Write-Output "Overall Parent Cost: $overallParentCost"
+Write-Output "Overall Government Cost: $overallGovernmentCost"
+Write-Output "Overall Total Cost: $overallTotalCost"
+
