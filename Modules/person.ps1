@@ -3,12 +3,18 @@
 class Person {
     [string]$FirstName
     [string]$LastName
-    [int]$Age
+    [double]$MorningCostPerHour
+    [double]$MorningGovSubsidyPerHour
+    [double]$AfternoonCostPerHour
+    [double]$AfternoonGovSubsidyPerHour
 
-    Person([string]$firstName, [string]$lastName, [int]$age) {
+    Person([string]$firstName, [string]$lastName, [double]$morningCostPerHour, [double]$morningGovSubsidyPerHour,[double]$afternoonCostPerHour,[double]$afternoonGovSubsidyPerHour) {
         $this.FirstName = $firstName
         $this.LastName = $lastName
-        $this.Age = $age
+        $this.MorningCostPerHour = $morningCostPerHour
+        $this.MorningGovSubsidyPerHour = $morningGovSubsidyPerHour
+        $this.AfternoonCostPerHour = $afternoonCostPerHour
+        $this.AfternoonGovSubsidyPerHour = $afternoonGovSubsidyPerHour
     }
 
     [void] SaveToFile([string]$filePath) {

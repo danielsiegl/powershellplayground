@@ -14,10 +14,10 @@ if ($PSScriptRoot -ne (Get-Location)) {
     Exit 1
 }
 
-
 . ./Modules/person.ps1
 . ./Modules/bankholidays.ps1
 . ./Modules/workday.ps1
+. ./Modules/CostWindow.ps1
 
 # Define the start and end dates for the year
 $startDate = Get-Date -Year 2025 -Month 1 -Day 1
@@ -26,12 +26,12 @@ $endDate = Get-Date -Year 2025 -Month 12 -Day 31
 
 # Combine person and schedule into a single object using the Child class
 $child = [Child]::new(
-    [Person]::new("John", "Doe", 2),
+    [Person]::new("Daniel", "Siegl", 6.00, 4.50, 5.00, 0),   # Person object with hourly rates
     [ordered]@{
-        Monday    = [PSCustomObject]@{ Start = "09:00 AM"; End = "05:00 PM" }   # Standard workday for Monday
-        Tuesday   = [PSCustomObject]@{ Start = "09:00 AM"; End = "05:00 PM" }   # Standard workday for Tuesday
-        Wednesday = [PSCustomObject]@{ Start = "09:00 AM"; End = "05:00 PM" }   # Standard workday for Wednesday
-        Thursday  = [PSCustomObject]@{ Start = "09:00 AM"; End = "05:00 PM" }   # Standard workday for Thursday
+        Monday    = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Monday
+        Tuesday   = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Tuesday
+        Wednesday = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Wednesday
+        Thursday  = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Thursday
     }
 )
 

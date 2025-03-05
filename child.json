@@ -1,25 +1,28 @@
 {
   "Person": {
-    "FirstName": "John",
-    "LastName": "Doe",
-    "Age": 2
+    "FirstName": "Daniel",
+    "LastName": "Siegl",
+    "MorningCostPerHour": 6.0,
+    "MorningGovSubsidyPerHour": 4.5,
+    "AfternoonCostPerHour": 5.0,
+    "AfternoonGovSubsidyPerHour": 0.0
   },
   "Schedule": {
-    "Tuesday": {
-      "Start": "09:00 AM",
-      "End": "05:00 PM"
-    },
-    "Thursday": {
-      "Start": "09:00 AM",
-      "End": "05:00 PM"
-    },
     "Wednesday": {
-      "Start": "09:00 AM",
-      "End": "05:00 PM"
+      "Start": "08:00 AM",
+      "End": "03:00 PM"
+    },
+    "Tuesday": {
+      "Start": "08:00 AM",
+      "End": "03:00 PM"
     },
     "Monday": {
-      "Start": "09:00 AM",
-      "End": "05:00 PM"
+      "Start": "08:00 AM",
+      "End": "03:00 PM"
+    },
+    "Thursday": {
+      "Start": "08:00 AM",
+      "End": "03:00 PM"
     }
   }
 }
