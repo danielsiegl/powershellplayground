@@ -54,14 +54,14 @@ class CostWindow {
     }
 }
 
-# Example usage:
-$start = [DateTime]::Parse("2025-03-05 08:00")
-$end = [DateTime]::Parse("2025-03-05 15:00")
-$morningRate = 6
-$afternoonRate = 5
-$morningGovSubsidy = 4.5
-$afternoonGovSubsidy = 0
+# # Example usage:
+# $start = [DateTime]::Parse("2025-03-05 08:00")
+# $end = [DateTime]::Parse("2025-03-05 15:00")
+# $morningRate = 6
+# $afternoonRate = 5
+# $morningGovSubsidy = 4.5
+# $afternoonGovSubsidy = 0
 
-$costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
-Write-Output "Total Cost: $($costWindow.GetTotalCost())"
-Write-Output "Total Government Subsidy: $($costWindow.GetTotalSubsidy())"
+# $costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
+# Write-Output "Total Cost: $($costWindow.GetTotalCost())"
+# Write-Output "Total Government Subsidy: $($costWindow.GetTotalSubsidy())"

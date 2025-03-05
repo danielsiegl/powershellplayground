@@ -1,9 +1,7 @@
-# Description: Tests for the Person class'
+# Load the functions and class to be tested
+. ./../Modules/person.ps1
 
 Describe "Person Class" {
-    BeforeAll { 
-        . "$PSScriptRoot\..\Modules\person.ps1"   
-    }
     Context "When creating a new Person object" {
         It "Should correctly assign properties" {
             $person = [Person]::new("John", "Doe", 30)
