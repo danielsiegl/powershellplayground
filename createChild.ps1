@@ -59,20 +59,13 @@ while ($currentDate -le $endDate) {
     $dayOfWeek = $currentDate.DayOfWeek
 
     # Check if the current day is a holiday
-    $isHoliday = $false
-
-    foreach ($holiday in $holidayArray) {
-        if ($currentDate.Date -eq $holiday.Date.Date) {
-            $isHoliday = $true
-            $holidayName = $holiday.Name
-            break
-        }
-    }
+    $isHoliday = $holidayArray.Date -contains $currentDate.Date
 
     # Check if the day is in the schedule and is not a holiday
     if ($Child.Schedule.Contains("$dayOfWeek") -and -not $isHoliday) {
         # Create a Workday object for the workday
 
+        # combine the schedule and person information to calculate the cost
         $dailySchedule = $child.Schedule[$dayOfWeek.ToString()]
         $start = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.Start)", 'yyyy-MM-dd hh:mm tt', $null)
         $end = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.End)", 'yyyy-MM-dd hh:mm tt', $null)
@@ -85,6 +78,7 @@ while ($currentDate -le $endDate) {
         $morningGovSubsidy = 4.5
         $afternoonGovSubsidy = 0
 
+        # Create a CostWindow object to calculate the cost for each workday - bit of an overkill - but the best way to show the usage of the class
         $costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
 
 
