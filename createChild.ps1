@@ -99,8 +99,6 @@ while ($currentDate -le $endDate) {
     $currentDate = $currentDate.AddDays(1)
 }
 
-
-
 # Group workdays by month and convert to JSON-friendly format
 $workdaysByMonthForJson = $workdays |
     Group-Object { (Get-Date $_.Date).ToString('yyyy-MM') } |
