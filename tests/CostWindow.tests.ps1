@@ -11,10 +11,6 @@ Describe "CostWindow Class" {
         $afternoonRate = 5
         $morningGovSubsidy = 4.5
         $afternoonGovSubsidy = 0
-
-        
-
-        # $costWindow = [CostWindow]::new()
     }
 
     It "should return 17.5 when start is 2025-03-05 08:00 and end is 2025-03-05 15:00" {
@@ -22,5 +18,4 @@ Describe "CostWindow Class" {
         $costWindow.GetTotalCost() | Should -Be 17.5
         $costWindow.GetTotalSubsidy() | Should -Be 22.5
     }
-
 }

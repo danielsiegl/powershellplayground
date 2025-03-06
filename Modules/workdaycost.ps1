@@ -8,12 +8,13 @@ function Get-Workdays-with-Cost-per-Child {
         [datetime]$startDate,
         [datetime]$endDate,
         [array]$holidayArray,
-        [Child]$child,
-        [double]$morningRate,
-        [double]$afternoonRate,
-        [double]$morningGovSubsidy,
-        [double]$afternoonGovSubsidy
+        [person]$person
     )
+
+    [double]$morningRate = $person.MorningCostPerHour
+    [double]$afternoonRate = $person.AfternoonCostPerHour
+    [double]$morningGovSubsidy = $person.MorningGovSubsidyPerHour
+    [double]$afternoonGovSubsidy = $person.AfternoonGovSubsidyPerHour
 
     # Initialize an array to hold workdays
     [Workday[]]$workdays = @()
@@ -28,15 +29,13 @@ function Get-Workdays-with-Cost-per-Child {
         $isHoliday = $holidayArray.Date -contains $currentDate.Date
 
         # Check if the day is in the schedule and is not a holiday
-        if ($child.Schedule.Contains("$dayOfWeek") -and -not $isHoliday) {
+        if ($person.Schedule.Contains("$dayOfWeek") -and -not $isHoliday) {
             # Create a Workday object for the workday
 
             # combine the schedule and person information to calculate the cost
-            $dailySchedule = $child.Schedule[$dayOfWeek.ToString()]
+            $dailySchedule = $person.Schedule[$dayOfWeek.ToString()]
             $start = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.Start)", 'yyyy-MM-dd hh:mm tt', $null)
             $end = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.End)", 'yyyy-MM-dd hh:mm tt', $null)
-
-            Write-Debug "Start: $start - End: $end"
 
             # Create a CostWindow object to calculate the cost for each workday - bit of an overkill - but the best way to show the usage of the class
             $costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
@@ -45,8 +44,8 @@ function Get-Workdays-with-Cost-per-Child {
             $workday = [Workday]::new(
                 $currentDate.ToString('yyyy-MM-dd'),
                 $dayOfWeek.ToString(),
-                $child.Schedule[$dayOfWeek.ToString()].Start,
-                $child.Schedule[$dayOfWeek.ToString()].End,
+                $person.Schedule[$dayOfWeek.ToString()].Start,
+                $person.Schedule[$dayOfWeek.ToString()].End,
                 $costWindow.GetTotalCost(),
                 $costWindow.GetTotalSubsidy()
             )
