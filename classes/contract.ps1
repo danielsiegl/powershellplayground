@@ -86,11 +86,16 @@ class Contract {
 
         Write-Debug $workdays.Count
 
-        [System.Collections.Generic.List[MonthlyCost]] $yearlyCosts = [System.Collections.Generic.List[MonthlyCost]]::new() 
         $yearlyCosts = $workdays |
-        Group-Object { (Get-Date $_.Date).ToString('yyyy-MM') } |
-        ForEach-Object { [MonthlyCost]::new($_.Name, $_.Count, ($_.Group | Measure-Object -Property TotalCost -Sum).Sum, ($_.Group | Measure-Object -Property TotalSubsidy -Sum).Sum) } 
-          
+            Group-Object { (Get-Date $_.Date).ToString('yyyy-MM') } |
+            ForEach-Object {
+                [MonthlyCost]::new(
+                    $_.Name,
+                    $_.Count,
+                    ($_.Group | Measure-Object -Property TotalCost -Sum).Sum,
+                    ($_.Group | Measure-Object -Property TotalSubsidy -Sum).Sum
+                )
+            }
         return $yearlyCosts
     }
 
@@ -106,8 +111,12 @@ class Contract {
     }
 }
 
-[MonthlyCost] $Monthly = [MonthlyCost]::new("January", 31, 1000.00, 500.00) 
-Write-Output $Monthly
-
 $contract = [Contract]::LoadFromFile("config/Contract.json")
 $contractResult = $contract.Calculate()
+$contractResult | ForEach-Object {
+    Write-Host "Month: $($_.Month)"
+    Write-Host "Days: $($_.Days)"
+    Write-Host "Total Cost: $($_.TotalCost)"
+    Write-Host "Total Subsidy: $($_.TotalSubsidy)"
+    Write-Host ""
+}
