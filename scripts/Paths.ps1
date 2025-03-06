@@ -1,6 +1,6 @@
 # Show-SortedPaths function
 # This script sorts the system PATH variable and displays it in color-coded format.
-function Show-SortedPaths {
+function Show-SortedPath {
     $paths = $env:Path -split ';'
 
     $sortedPaths = $paths | Sort-Object
@@ -18,12 +18,15 @@ function Show-SortedPaths {
 # Set-Path function
 # This function sets a new path variable to the specified path.
 function Set-Path {
+    [CmdletBinding(SupportsShouldProcess)]
     param (
         [string]$newPath
     )
 
     # Set a new path variable to the specified path
-    if ($env:Path -notmatch [regex]::Escape($newPath)) {
-        $env:Path += ";$newPath"
+    if ($PSCmdlet.ShouldProcess("Adding $newPath to PATH")) {
+        if ($env:Path -notmatch [regex]::Escape($newPath)) {
+            $env:Path += ";$newPath"
+        }
     }
 }

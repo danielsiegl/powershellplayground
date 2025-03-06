@@ -1,73 +1,73 @@
 [
   {
     "Month": "2025-01",
-    "Count": 16,
+    "Days": 16,
     "TotalCost": 280.0,
     "TotalSubsidy": 360.0
   },
   {
     "Month": "2025-02",
-    "Count": 16,
+    "Days": 16,
     "TotalCost": 280.0,
     "TotalSubsidy": 360.0
   },
   {
     "Month": "2025-03",
-    "Count": 17,
+    "Days": 17,
     "TotalCost": 297.5,
     "TotalSubsidy": 382.5
   },
   {
     "Month": "2025-04",
-    "Count": 17,
+    "Days": 17,
     "TotalCost": 297.5,
     "TotalSubsidy": 382.5
   },
   {
     "Month": "2025-05",
-    "Count": 15,
+    "Days": 15,
     "TotalCost": 262.5,
     "TotalSubsidy": 337.5
   },
   {
     "Month": "2025-06",
-    "Count": 15,
+    "Days": 15,
     "TotalCost": 262.5,
     "TotalSubsidy": 337.5
   },
   {
     "Month": "2025-07",
-    "Count": 19,
+    "Days": 19,
     "TotalCost": 332.5,
     "TotalSubsidy": 427.5
   },
   {
     "Month": "2025-08",
-    "Count": 16,
+    "Days": 16,
     "TotalCost": 280.0,
     "TotalSubsidy": 360.0
   },
   {
     "Month": "2025-09",
-    "Count": 18,
+    "Days": 18,
     "TotalCost": 315.0,
     "TotalSubsidy": 405.0
   },
   {
     "Month": "2025-10",
-    "Count": 18,
+    "Days": 18,
     "TotalCost": 315.0,
     "TotalSubsidy": 405.0
   },
   {
     "Month": "2025-11",
-    "Count": 16,
+    "Days": 16,
     "TotalCost": 280.0,
     "TotalSubsidy": 360.0
   },
   {
     "Month": "2025-12",
-    "Count": 17,
+    "Days": 17,
     "TotalCost": 297.5,
     "TotalSubsidy": 382.5
   }

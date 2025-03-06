@@ -1,4 +1,4 @@
-class CostWindow {
+class DailyCost {
     [DateTime]$StartTime
     [DateTime]$EndTime
     [double]$MorningCostPerHour
@@ -7,8 +7,8 @@ class CostWindow {
     [double]$AfternoonGovSubsidyPerHour
     [double]$TotalCost
     [double]$TotalSubsidy
-    
-    CostWindow([DateTime]$start, [DateTime]$end, [double]$morningCost, [double]$afternoonCost, [double]$morningGovSubsidy, [double]$afternoonGovSubsidy) {
+    # Constructor to initialize the CostWindow object
+    DailyCost([DateTime]$start, [DateTime]$end, [double]$morningCost, [double]$afternoonCost, [double]$morningGovSubsidy, [double]$afternoonGovSubsidy) {
         if ($end -le $start) {
             throw "End time must be after start time."
         }
@@ -18,10 +18,10 @@ class CostWindow {
         $this.AfternoonCostPerHour = $afternoonCost
         $this.MorningGovSubsidyPerHour = $morningGovSubsidy
         $this.AfternoonGovSubsidyPerHour = $afternoonGovSubsidy
-        
+        # Calculate costs upon initialization
         $this.CalculateCosts()
     }
-    
+
     hidden [void] CalculateCosts() {
         $sumOfCost = 0
         $sumOfSub = 0
@@ -44,24 +44,12 @@ class CostWindow {
         $this.TotalCost = [math]::Round($sumOfCost, 2)
         $this.TotalSubsidy = [math]::Round($sumOfSub, 2)
     }
-    
+
     [double] GetTotalCost() {
         return [math]::Round($this.TotalCost, 2)
     }
-    
+
     [double] GetTotalSubsidy() {
         return [math]::Round($this.TotalSubsidy, 2)
     }
 }
-
-# # Example usage:
-# $start = [DateTime]::Parse("2025-03-05 08:00")
-# $end = [DateTime]::Parse("2025-03-05 15:00")
-# $morningRate = 6
-# $afternoonRate = 5
-# $morningGovSubsidy = 4.5
-# $afternoonGovSubsidy = 0
-
-# $costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
-# Write-Output "Total Cost: $($costWindow.GetTotalCost())"
-# Write-Output "Total Government Subsidy: $($costWindow.GetTotalSubsidy())"

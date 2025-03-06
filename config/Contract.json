@@ -1,6 +1,7 @@
 {
   "FirstName": "Daniel",
   "LastName": "Siegl",
+  "Year": "2025",
   "MorningCostPerHour": 6.0,
   "MorningGovSubsidyPerHour": 4.5,
   "AfternoonCostPerHour": 5.0,
