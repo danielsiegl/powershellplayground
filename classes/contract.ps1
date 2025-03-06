@@ -22,17 +22,13 @@ class Contract {
         $this.AfternoonCostPerHour = $afternoonCostPerHour
         $this.AfternoonGovSubsidyPerHour = $afternoonGovSubsidyPerHour
         $this.Schedule = $schedule
-
-        
     }
 
-    
     [System.Collections.Generic.List[MonthlyCost]] Calculate() {
         # Function body goes here
         # Define the start and end dates for the year
         [datetime]$startDateContract = Get-Date -Year $this.Year -Month 1 -Day 1
         [datetime]$endDateContract = Get-Date -Year $this.Year -Month 12 -Day 31
-        
         [double]$morningRate = $this.MorningCostPerHour
         [double]$afternoonRate = $this.AfternoonCostPerHour
         [double]$morningGovSubsidy = $this.MorningGovSubsidyPerHour
@@ -43,7 +39,7 @@ class Contract {
         # Initialize an array to hold workdays
         #[Workday[]]$workdays = @()
         [System.Collections.Generic.List[Workday]] $workdays = [System.Collections.Generic.List[Workday]]::new()
-        
+
         # Loop through each day in the year
         $currentDate = $startDateContract
         while ($currentDate -le $endDateContract) {
@@ -52,7 +48,7 @@ class Contract {
                 $isHoliday = $true
             } else {
                 $isHoliday = $false
-            } 
+            }
 
             # Get the day of the week
             $dayOfWeek = $currentDate.DayOfWeek
@@ -109,14 +105,4 @@ class Contract {
         [Contract]$retval = [Contract]::new($data.FirstName, $data.LastName, $data.Year,$data.MorningCostPerHour, $data.MorningGovSubsidyPerHour, $data.AfternoonCostPerHour, $data.AfternoonGovSubsidyPerHour, $scheduleData)
         return $retval
     }
-}
-
-$contract = [Contract]::LoadFromFile("config/Contract.json")
-$contractResult = $contract.Calculate()
-$contractResult | ForEach-Object {
-    Write-Host "Month: $($_.Month)"
-    Write-Host "Days: $($_.Days)"
-    Write-Host "Total Cost: $($_.TotalCost)"
-    Write-Host "Total Subsidy: $($_.TotalSubsidy)"
-    Write-Host ""
 }

@@ -26,3 +26,13 @@ $contractResult | ForEach-Object {
 
 # Save the workdays per month to a JSON file
 $contractResult | ConvertTo-Json | Set-Content -Path "data/contractResult.json"
+
+# $contract = [Contract]::LoadFromFile("config/Contract.json")
+# $contractResult = $contract.Calculate()
+# $contractResult | ForEach-Object {
+#     Write-Host "Month: $($_.Month)"
+#     Write-Host "Days: $($_.Days)"
+#     Write-Host "Total Cost: $($_.TotalCost)"
+#     Write-Host "Total Subsidy: $($_.TotalSubsidy)"
+#     Write-Host ""
+# }
