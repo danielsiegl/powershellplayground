@@ -6,11 +6,11 @@
   "AfternoonCostPerHour": 5.0,
   "AfternoonGovSubsidyPerHour": 0.0,
   "Schedule": {
-    "Tuesday": {
+    "Monday": {
       "Start": "08:00 AM",
       "End": "03:00 PM"
     },
-    "Thursday": {
+    "Tuesday": {
       "Start": "08:00 AM",
       "End": "03:00 PM"
     },
@@ -18,7 +18,7 @@
       "Start": "08:00 AM",
       "End": "03:00 PM"
     },
-    "Monday": {
+    "Thursday": {
       "Start": "08:00 AM",
       "End": "03:00 PM"
     }
