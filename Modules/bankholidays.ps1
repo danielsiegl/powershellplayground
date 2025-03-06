@@ -51,3 +51,15 @@ function Get-AustrianBankHolidays {
     return $holidayArray
 }
 
+function Get-AustrianBankHolidaysFromDateTime {
+    param (
+        [datetime]$startDate,
+        [datetime]$endDate
+    )
+
+    $restDateFormat = Get-RestDateFormat
+    $startDateString = $startDate.ToString($restDateFormat)
+    $endDateString = $endDate.ToString($restDateFormat)
+
+    return Get-AustrianBankHolidays -StartDate $startDateString -EndDate $endDateString
+}

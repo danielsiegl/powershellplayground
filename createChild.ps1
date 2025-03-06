@@ -1,9 +1,5 @@
 # This script creates a child process and includes necessary modules for person, bank holidays, and workday functionalities.
 # 
-# Modules:
-# - person.ps1: Contains functions and definitions related to person entities.
-# - bankholidays.ps1: Provides functions to handle bank holidays.
-# - workday.ps1: Includes functions to manage workday calculations and operations.
 # Usage:
 # 1. Ensure the script is executed in the correct directory.    
 # 2. Run the script to create a child object and calculate workdays for the year 2025.
@@ -20,7 +16,6 @@ if ($PSScriptRoot -ne (Get-Location)) {
 . ./Modules/CostWindow.ps1
 . ./Modules/workdaycost.ps1
 
-
 # Define the start and end dates for the year
 $startDate = Get-Date -Year 2025 -Month 1 -Day 1
 $endDate = Get-Date -Year 2025 -Month 12 -Day 31
@@ -28,13 +23,8 @@ $endDate = Get-Date -Year 2025 -Month 12 -Day 31
 # Load the combined object from the JSON file
 $person = [Person]::LoadFromFile("config/person.json")
 
-
-$restDateFormat = Get-RestDateFormat
-$startDateString = $startDate.ToString($restDateFormat)
-$endDateString = $endDate.ToString($restDateFormat)
-
-$holidayArray = Get-AustrianBankHolidays -StartDate $startDateString -EndDate $endDateString
-Write-Output "Start date: $startDateString - End date: $endDateString - Feiertage: $($holidayArray.Count)"
+$holidayArray = Get-AustrianBankHolidaysFromDateTime -startDate $startDate -endDate $endDate
+Write-Output "Start date: $startDate - End date: $endDate - Feiertage: $($holidayArray.Count)"
 
 # Call the function to get workdays
 $workdays = Get-Workdays-with-Cost-per-Child -startDate $startDate -endDate $endDate -holidayArray $holidayArray -person $person 
