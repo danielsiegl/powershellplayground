@@ -1,5 +1,3 @@
-# Define the Person class
-# This class represents a person with properties for first name, last name, and age.
 class Person {
     [string]$FirstName
     [string]$LastName
@@ -7,37 +5,45 @@ class Person {
     [double]$MorningGovSubsidyPerHour
     [double]$AfternoonCostPerHour
     [double]$AfternoonGovSubsidyPerHour
+    [hashtable]$Schedule
 
-    Person([string]$firstName, [string]$lastName, [double]$morningCostPerHour, [double]$morningGovSubsidyPerHour,[double]$afternoonCostPerHour,[double]$afternoonGovSubsidyPerHour) {
+    Person([string]$firstName, [string]$lastName, [double]$morningCostPerHour, [double]$morningGovSubsidyPerHour, [double]$afternoonCostPerHour, [double]$afternoonGovSubsidyPerHour, [hashtable]$schedule) {
         $this.FirstName = $firstName
         $this.LastName = $lastName
         $this.MorningCostPerHour = $morningCostPerHour
         $this.MorningGovSubsidyPerHour = $morningGovSubsidyPerHour
         $this.AfternoonCostPerHour = $afternoonCostPerHour
         $this.AfternoonGovSubsidyPerHour = $afternoonGovSubsidyPerHour
-    }
-
-    [void] SaveToFile([string]$filePath) {
-        $json = $this | ConvertTo-Json -Depth 3
-        Set-Content -Path $filePath -Value $json
+        $this.Schedule = $schedule
     }
 
     static [Person] LoadFromFile([string]$filePath) {
-        $json = Get-Content -Path $filePath
-        return $json | ConvertFrom-Json -AsHashtable | ForEach-Object {
-            [Person]::new($_.FirstName, $_.LastName, $_.MorningCostPerHour, $_.MorningGovSubsidyPerHour, $_.AfternoonCostPerHour, $_.AfternoonGovSubsidyPerHour)
+        if (-Not (Test-Path -Path $filePath)) {
+            throw "File not found: $filePath"
         }
+        $json = Get-Content -Path $filePath -Raw
+        $data = $json | ConvertFrom-Json -AsHashtable
+        $scheduleData = $data.Schedule
+        [Person]$retval = [Person]::new($data.FirstName, $data.LastName, $data.MorningCostPerHour, $data.MorningGovSubsidyPerHour, $data.AfternoonCostPerHour, $data.AfternoonGovSubsidyPerHour, $scheduleData)
+        return $retval
     }
 }
 
-# Define the Child class
-# This class represents a child with properties for person and schedule.
-class Child {
-    [Person]$Person
-    [hashtable]$Schedule
+function Set-Sample-Data {
+    # Combine person and schedule into a single object using the Person class
+    $person = [Person]::new("Daniel", "Siegl", 6.0, 4.5, 5.0, 0,  # Person object with hourly rates
+    [ordered]@{
+        Monday    = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Monday
+        Tuesday   = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Tuesday
+        Wednesday = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Wednesday
+        Thursday  = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Thursday
+    })
 
-    Child([Person]$person, [hashtable]$schedule) {
-        $this.Person = $person
-        $this.Schedule = $schedule
-    }
+    # Save the combined object to a JSON file
+    $person | ConvertTo-Json -Depth 5 | Set-Content -Path "config/person.json"
+}
+function Get-Sample-Data {
+    # Load the person object from the JSON file
+    $person = [Person]::LoadFromFile("config/person.json")
+    return $person
 }

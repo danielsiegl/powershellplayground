@@ -20,30 +20,14 @@ if ($PSScriptRoot -ne (Get-Location)) {
 . ./Modules/CostWindow.ps1
 . ./Modules/workdaycost.ps1
 
+
 # Define the start and end dates for the year
 $startDate = Get-Date -Year 2025 -Month 1 -Day 1
 $endDate = Get-Date -Year 2025 -Month 12 -Day 31
 
-#define the rates
-$morningRate = 6
-$afternoonRate = 5
-$morningGovSubsidy = 4.5
-$afternoonGovSubsidy = 0
+# Load the combined object from the JSON file
+$person = [Person]::LoadFromFile("config/person.json")
 
-# Combine person and schedule into a single object using the Child class
-$child = [Child]::new(
-    [Person]::new("Daniel", "Siegl", $morningRate, $morningGovSubsidy, $afternoonRate, $afternoonGovSubsidy),   # Person object with hourly rates
-    [ordered]@{
-        Monday    = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Monday
-        Tuesday   = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Tuesday
-        Wednesday = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Wednesday
-        Thursday  = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Thursday
-    }
-)
-
-Write-Output "Child: $($child.Person.FirstName) $($child.Person.LastName)"
-# Save the combined object to a JSON file
-$child | ConvertTo-Json -Depth 3 | Set-Content -Path "child.json"
 
 $restDateFormat = Get-RestDateFormat
 $startDateString = $startDate.ToString($restDateFormat)
@@ -53,7 +37,7 @@ $holidayArray = Get-AustrianBankHolidays -StartDate $startDateString -EndDate $e
 Write-Output "Start date: $startDateString - End date: $endDateString - Feiertage: $($holidayArray.Count)"
 
 # Call the function to get workdays
-$workdays = Get-Workdays-with-Cost-per-Child -startDate $startDate -endDate $endDate -holidayArray $holidayArray -child $child -morningRate $morningRate -afternoonRate $afternoonRate -morningGovSubsidy $morningGovSubsidy -afternoonGovSubsidy $afternoonGovSubsidy
+$workdays = Get-Workdays-with-Cost-per-Child -startDate $startDate -endDate $endDate -holidayArray $holidayArray -person $person 
 
 # Group workdays by month and convert to JSON-friendly format
 $workdaysByMonthForJson = $workdays |
@@ -74,4 +58,4 @@ $workdaysByMonthForJson | ForEach-Object {
 }
 
 # Save the workdays per month to a JSON file
-$workdaysByMonthForJson | ConvertTo-Json | Set-Content -Path "workdaysByMonth.json"
+$workdaysByMonthForJson | ConvertTo-Json | Set-Content -Path "data/workdaysByMonth.json"
