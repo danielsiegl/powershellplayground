@@ -59,3 +59,25 @@ function Get-Workdays-with-Cost-per-Child {
 
     return $workdays
 }
+
+# Function to get workdays cost per month
+function Get-Workdays-Cost-per-Month {
+    param (
+        [Parameter(Mandatory=$true)]
+        [array]$workdays
+    )
+
+    # Group workdays by month and convert to JSON-friendly format
+    $workdaysByMonthForJson = $workdays |
+        Group-Object { (Get-Date $_.Date).ToString('yyyy-MM') } |
+        ForEach-Object {
+            [PSCustomObject]@{
+                Month = $_.Name
+                Count = $_.Count
+                TotalCost = ($_.Group | Measure-Object -Property TotalCost -Sum).Sum
+                TotalSubsidy = ($_.Group | Measure-Object -Property TotalSubsidy -Sum).Sum
+            }
+        }
+
+    return $workdaysByMonthForJson
+}

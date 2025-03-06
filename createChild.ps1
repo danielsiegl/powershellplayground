@@ -39,17 +39,8 @@ Write-Output "Start date: $startDateString - End date: $endDateString - Feiertag
 # Call the function to get workdays
 $workdays = Get-Workdays-with-Cost-per-Child -startDate $startDate -endDate $endDate -holidayArray $holidayArray -person $person 
 
-# Group workdays by month and convert to JSON-friendly format
-$workdaysByMonthForJson = $workdays |
-    Group-Object { (Get-Date $_.Date).ToString('yyyy-MM') } |
-    ForEach-Object {
-        [PSCustomObject]@{
-            Month = $_.Name
-            Count = $_.Count
-            TotalCost = ($_.Group | Measure-Object -Property TotalCost -Sum).Sum
-            TotalSubsidy = ($_.Group | Measure-Object -Property TotalSubsidy -Sum).Sum
-        }
-    }
+# Call the function to get workdays cost per month
+$workdaysByMonthForJson = Get-Workdays-Cost-per-Month -workdays $workdays
 
 # Output the workdays per month
 Write-Output "Workdays per month:"
