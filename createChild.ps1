@@ -18,15 +18,21 @@ if ($PSScriptRoot -ne (Get-Location)) {
 . ./Modules/bankholidays.ps1
 . ./Modules/workday.ps1
 . ./Modules/CostWindow.ps1
+. ./Modules/workdaycost.ps1
 
 # Define the start and end dates for the year
 $startDate = Get-Date -Year 2025 -Month 1 -Day 1
 $endDate = Get-Date -Year 2025 -Month 12 -Day 31
 
+#define the rates
+$morningRate = 6
+$afternoonRate = 5
+$morningGovSubsidy = 4.5
+$afternoonGovSubsidy = 0
 
 # Combine person and schedule into a single object using the Child class
 $child = [Child]::new(
-    [Person]::new("Daniel", "Siegl", 6.00, 4.50, 5.00, 0),   # Person object with hourly rates
+    [Person]::new("Daniel", "Siegl", $morningRate, $morningGovSubsidy, $afternoonRate, $afternoonGovSubsidy),   # Person object with hourly rates
     [ordered]@{
         Monday    = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Monday
         Tuesday   = [PSCustomObject]@{ Start = "08:00 AM"; End = "03:00 PM" }   # Standard workday for Tuesday
@@ -35,7 +41,7 @@ $child = [Child]::new(
     }
 )
 
-Write-Output "Child object created with name: $($child.Person.FirstName) $($child.Person.LastName)"
+Write-Output "Child: $($child.Person.FirstName) $($child.Person.LastName)"
 # Save the combined object to a JSON file
 $child | ConvertTo-Json -Depth 3 | Set-Content -Path "child.json"
 
@@ -43,60 +49,11 @@ $restDateFormat = Get-RestDateFormat
 $startDateString = $startDate.ToString($restDateFormat)
 $endDateString = $endDate.ToString($restDateFormat)
 
-Write-Output "Start date: $startDateString - End date: $endDateString with format: $restDateFormat"
-
 $holidayArray = Get-AustrianBankHolidays -StartDate $startDateString -EndDate $endDateString
+Write-Output "Start date: $startDateString - End date: $endDateString - Feiertage: $($holidayArray.Count)"
 
-Write-Output "Feiertage $($holidayArray.Count)"
-
-# Initialize an array to hold workdays
-[Workday[]]$workdays = @()
-
-# Loop through each day in the year
-$currentDate = $startDate
-while ($currentDate -le $endDate) {
-    # Get the day of the week
-    $dayOfWeek = $currentDate.DayOfWeek
-
-    # Check if the current day is a holiday
-    $isHoliday = $holidayArray.Date -contains $currentDate.Date
-
-    # Check if the day is in the schedule and is not a holiday
-    if ($Child.Schedule.Contains("$dayOfWeek") -and -not $isHoliday) {
-        # Create a Workday object for the workday
-
-        # combine the schedule and person information to calculate the cost
-        $dailySchedule = $child.Schedule[$dayOfWeek.ToString()]
-        $start = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.Start)", 'yyyy-MM-dd hh:mm tt', $null)
-        $end = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.End)", 'yyyy-MM-dd hh:mm tt', $null)
-
-        Write-Debug "Start: $start - End: $end"
-
-        $morningRate = 6
-        $afternoonRate = 5
-        $morningGovSubsidy = 4.5
-        $afternoonGovSubsidy = 0
-
-        # Create a CostWindow object to calculate the cost for each workday - bit of an overkill - but the best way to show the usage of the class
-        $costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
-        
-        # Create a Workday object
-        $workday = [Workday]::new(
-            $currentDate.ToString('yyyy-MM-dd'),
-            $dayOfWeek.ToString(),
-            $child.Schedule[$dayOfWeek.ToString()].Start,
-            $child.Schedule[$dayOfWeek.ToString()].End,
-            $costWindow.GetTotalCost(),
-            $costWindow.GetTotalSubsidy()
-
-        )
-        # Add the workday to the array
-        $workdays += $workday
-    }
-
-    # Move to the next day
-    $currentDate = $currentDate.AddDays(1)
-}
+# Call the function to get workdays
+$workdays = Get-Workdays-with-Cost-per-Child -startDate $startDate -endDate $endDate -holidayArray $holidayArray -child $child -morningRate $morningRate -afternoonRate $afternoonRate -morningGovSubsidy $morningGovSubsidy -afternoonGovSubsidy $afternoonGovSubsidy
 
 # Group workdays by month and convert to JSON-friendly format
 $workdaysByMonthForJson = $workdays |
