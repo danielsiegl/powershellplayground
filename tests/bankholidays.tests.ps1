@@ -2,22 +2,7 @@
 
 Describe "Get-RestDateFormat" {
     BeforeAll {
-         # Load the class definition
-        # strange handling is required so it works in both environments
-        # (VSCode and GitHub Actions)
-        $paths = @(
-            "$PSScriptRoot/functions\bankholidays.ps1",
-            "$PSScriptRoot/../functions\bankholidays.ps1"
-        )
-
-        $foundPath = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1
-
-        if ($foundPath) {
-            . $foundPath
-        }
-        else {
-            throw "File not found: $($paths -join ', ')"
-        }
+        . "$PSScriptRoot\..\Modules\bankholidays.ps1"
     }
     It "should return the correct date format" {
         $result = Get-RestDateFormat
@@ -25,9 +10,23 @@ Describe "Get-RestDateFormat" {
     }
 }
 
+Describe "HoliDayClass" {
+    BeforeAll {
+        . "$PSScriptRoot\..\Modules\bankholidays.ps1"
+    }
+    It "should create an object with the correct properties" {
+        $date = [datetime]"2023-12-25"
+        $name = "Christmas Day"
+        $holiday = [HoliDayClass]::new($date, $name)
+
+        $holiday.Date | Should -Be $date
+        $holiday.Name | Should -Be $name
+    }
+}
+
 Describe "Get-AustrianBankHolidays" {
     BeforeAll {
-        . "$PSScriptRoot\..\functions\bankholidays.ps1"
+        . "$PSScriptRoot\..\Modules\bankholidays.ps1"
     }
     Context "When called with valid dates" {
         It "Should return an array of holiday objects" {
