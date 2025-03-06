@@ -46,11 +46,11 @@ class CostWindow {
     }
     
     [double] GetTotalCost() {
-        return $this.TotalCost
+        return [math]::Round($this.TotalCost, 2)
     }
     
     [double] GetTotalSubsidy() {
-        return $this.TotalSubsidy
+        return [math]::Round($this.TotalSubsidy, 2)
     }
 }
 

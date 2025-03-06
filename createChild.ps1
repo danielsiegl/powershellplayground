@@ -70,9 +70,8 @@ while ($currentDate -le $endDate) {
         $start = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.Start)", 'yyyy-MM-dd hh:mm tt', $null)
         $end = [DateTime]::ParseExact("$($currentDate.ToString('yyyy-MM-dd')) $($dailySchedule.End)", 'yyyy-MM-dd hh:mm tt', $null)
 
-        Write-Output "Start: $start - End: $end"
+        Write-Debug "Start: $start - End: $end"
 
-       
         $morningRate = 6
         $afternoonRate = 5
         $morningGovSubsidy = 4.5
@@ -80,8 +79,8 @@ while ($currentDate -le $endDate) {
 
         # Create a CostWindow object to calculate the cost for each workday - bit of an overkill - but the best way to show the usage of the class
         $costWindow = [CostWindow]::new($start, $end, $morningRate, $afternoonRate, $morningGovSubsidy, $afternoonGovSubsidy)
-
-
+        
+        # Create a Workday object
         $workday = [Workday]::new(
             $currentDate.ToString('yyyy-MM-dd'),
             $dayOfWeek.ToString(),
@@ -114,7 +113,7 @@ $workdaysByMonthForJson = $workdays |
 # Output the workdays per month
 Write-Output "Workdays per month:"
 $workdaysByMonthForJson | ForEach-Object {
-    Write-Output "Month: $($_.Month) - Count: $($_.Count)"
+    Write-Output ("Month: {0} - Count: {1} - TotalCost: €{2:F2} - TotalSubsidy: €{3:F2}" -f $_.Month, $_.Count, $_.TotalCost, $_.TotalSubsidy)
 }
 
 # Save the workdays per month to a JSON file
