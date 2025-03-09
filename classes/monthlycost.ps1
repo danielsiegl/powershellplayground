@@ -11,5 +11,3 @@ class MonthlyCost {
         $this.TotalSubsidy = $totalSubsidy
     }
 }
-
-Export-ModuleMember MonthlyCost

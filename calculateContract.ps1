@@ -1,9 +1,7 @@
-Remove-Module monthlycost -ErrorAction SilentlyContinue
-Import-Module "./classes/monthlycost.psm1"
 . "$PSScriptRoot\classes\contract.ps1"
 . "classes\workday.ps1"
 . "classes\dailycost.ps1"
-#. "classes\monthlycost.psm1"
+. "classes\monthlycost.ps1"
 . "functions\bankholidays.ps1"
 
 # Check if the execution directory is the script directory
