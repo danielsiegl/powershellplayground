@@ -21,7 +21,7 @@ Write-Output "Morning cost per hour: €$($contract.MorningCostPerHour) - Mornin
 # Output the workdays per month
 Write-Output "Workdays per month:"
 $contractResult | ForEach-Object {
-    Write-Output ("Month: {0} - Count: {1} - TotalCost: €{2:F2} - TotalSubsidy: €{3:F2}" -f $_.Month, $_.Count, $_.TotalCost, $_.TotalSubsidy)
+    Write-Output ("Month: {0} - Count: {1} - TotalCost: €{2:F2} - TotalSubsidy: €{3:F2}" -f $_.Month, $_.Days, $_.TotalCost, $_.TotalSubsidy)
 }
 
 # Save the workdays per month to a JSON file
