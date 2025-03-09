@@ -1,7 +1,102 @@
-. "classes\workday.ps1"
-. "classes\dailycost.ps1"
-. "classes\monthlycost.ps1"
+# Load the bank holidays function
 . "functions\bankholidays.ps1"
+
+# Define the Contract class
+# This class represents a contract with properties for first name, last name, year, cost per hour, subsidy per hour, and schedule.
+class MonthlyCost {
+    [string]$Month
+    [int] $Days
+    [double] $TotalCost
+    [double] $TotalSubsidy
+
+    MonthlyCost([string]$month, [int]$days, [double]$totalCost, [double]$totalSubsidy) {
+        $this.Month = $month
+        $this.Days = $days
+        $this.TotalCost = $totalCost
+        $this.TotalSubsidy = $totalSubsidy
+    }
+}
+
+# Define the DailyCost class
+# This class represents the cost calculation for a single day with properties for start time, end time, cost per hour, and government subsidy per hour.
+class DailyCost {
+    [DateTime]$StartTime
+    [DateTime]$EndTime
+    [double]$MorningCostPerHour
+    [double]$AfternoonCostPerHour
+    [double]$MorningGovSubsidyPerHour
+    [double]$AfternoonGovSubsidyPerHour
+    [double]$TotalCost
+    [double]$TotalSubsidy
+    # Constructor to initialize the CostWindow object
+    DailyCost([DateTime]$start, [DateTime]$end, [double]$morningCost, [double]$afternoonCost, [double]$morningGovSubsidy, [double]$afternoonGovSubsidy) {
+        if ($end -le $start) {
+            throw "End time must be after start time."
+        }
+        $this.StartTime = $start
+        $this.EndTime = $end
+        $this.MorningCostPerHour = $morningCost
+        $this.AfternoonCostPerHour = $afternoonCost
+        $this.MorningGovSubsidyPerHour = $morningGovSubsidy
+        $this.AfternoonGovSubsidyPerHour = $afternoonGovSubsidy
+        # Calculate costs upon initialization
+        $this.CalculateCosts()
+    }
+
+    hidden [void] CalculateCosts() {
+        $sumOfCost = 0
+        $sumOfSub = 0
+        $current = $this.StartTime
+        while ($current -lt $this.EndTime) {
+            $nextHour = $current.AddHours(1)
+            if ($current.Hour -ge 8 -and $current.Hour -lt 13) {
+                # Morning pricing with optional government subsidy
+                $cost = $this.MorningCostPerHour - $this.MorningGovSubsidyPerHour
+                $sumOfCost += [math]::Min(($this.EndTime - $current).TotalHours, 1) * [math]::Max($cost, 0)
+                $sumOfSub += [math]::Min(($this.EndTime - $current).TotalHours, 1) * $this.MorningGovSubsidyPerHour
+            } elseif ($current.Hour -ge 13 -and $current.Hour -lt 15) {
+                # Afternoon pricing with optional government subsidy
+                $cost = $this.AfternoonCostPerHour - $this.AfternoonGovSubsidyPerHour
+                $sumOfCost += [math]::Min(($this.EndTime - $current).TotalHours, 1) * [math]::Max($cost, 0)
+                $sumOfSub += [math]::Min(($this.EndTime - $current).TotalHours, 1) * $this.AfternoonGovSubsidyPerHour
+            }
+            $current = $nextHour
+        }
+        $this.TotalCost = [math]::Round($sumOfCost, 2)
+        $this.TotalSubsidy = [math]::Round($sumOfSub, 2)
+    }
+
+    [double] GetTotalCost() {
+        return [math]::Round($this.TotalCost, 2)
+    }
+
+    [double] GetTotalSubsidy() {
+        return [math]::Round($this.TotalSubsidy, 2)
+    }
+}
+
+# Define the Workday class
+# This class represents a workday with properties for date, day of the week, start time, and end time.
+class Workday {
+    [string]$Date
+    [string]$DayOfWeek
+    [string]$StartTime
+    [string]$EndTime
+    [double]$TotalCost
+    [double]$TotalSubsidy
+
+    Workday([string]$date, [string]$dayOfWeek, [string]$startTime, [string]$endTime, [double]$totalCost, [double]$totalSubsidy) {
+        $this.Date = $date
+        $this.DayOfWeek = $dayOfWeek
+        $this.StartTime = $startTime
+        $this.EndTime = $endTime
+        $this.TotalCost = $totalCost
+        $this.TotalSubsidy = $totalSubsidy
+    }
+}
+
+# Define the Contract class
+# This class represents a contract with properties for first name, last name, year, cost per hour, subsidy per hour, and schedule.
 
 class Contract {
     [string]$FirstName
