@@ -1,6 +1,8 @@
+Remove-Module monthlycost -ErrorAction SilentlyContinue
+Import-Module "./classes/monthlycost.psm1"
 . "classes\workday.ps1"
 . "classes\dailycost.ps1"
-. "classes\monthlycost.ps1"
+#. "classes\monthlycost.ps1"
 . "functions\bankholidays.ps1"
 
 class Contract {
