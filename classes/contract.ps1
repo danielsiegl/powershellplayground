@@ -1,5 +1,5 @@
 # Load the bank holidays function
-. "functions\bankholidays.ps1"
+. functions\bankholidays.ps1
 
 # Define the Contract class
 # This class represents a contract with properties for first name, last name, year, cost per hour, subsidy per hour, and schedule.
