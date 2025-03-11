@@ -2,7 +2,22 @@
 
 Describe "Get-RestDateFormat" {
     BeforeAll {
-        . "$PSScriptRoot\..\functions\bankholidays.ps1"
+         # Load the class definition
+        # strange handling is required so it works in both environments
+        # (VSCode and GitHub Actions)
+        $paths = @(
+            "$PSScriptRoot/functions\bankholidays.ps1",
+            "$PSScriptRoot/../functions\bankholidays.ps1"
+        )
+
+        $foundPath = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+        if ($foundPath) {
+            . $foundPath
+        }
+        else {
+            throw "File not found: $($paths -join ', ')"
+        }
     }
     It "should return the correct date format" {
         $result = Get-RestDateFormat
