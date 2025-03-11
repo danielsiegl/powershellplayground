@@ -3,7 +3,21 @@
 Describe 'HoliDay Class' {
     BeforeAll {
         # Load the class definition
-        . "$PSScriptRoot/../Classes/holiday.ps1"
+        # strange handling is required so it works in both environments
+        # (VSCode and GitHub Actions)
+        $paths = @(
+            "$PSScriptRoot/classes/holiday.ps1",
+            "$PSScriptRoot/../classes/holiday.ps1"
+        )
+
+        $foundPath = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+        if ($foundPath) {
+            . $foundPath
+        }
+        else {
+            throw "File not found: $($paths -join ', ')"
+        }
     }
     Context 'Constructor' {
         It 'should create an instance of HoliDay with correct properties' {

@@ -3,7 +3,36 @@
 Describe 'Contract Class' {
     BeforeAll {
         # Load the class definition
-        . "$PSScriptRoot/../Classes/contract.ps1"
+        # strange handling is required so it works in both environments
+        # (VSCode and GitHub Actions)
+        $paths = @(
+            "$PSScriptRoot/classes/contract.ps1",
+            "$PSScriptRoot/../classes/contract.ps1"
+        )
+
+        $foundPath = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+        if ($foundPath) {
+            . $foundPath
+        }
+        else {
+            throw "File not found: $($paths -join ', ')"
+        }
+
+        $paths = @(
+            "$PSScriptRoot/config/contract.json",
+            "$PSScriptRoot/../config/contract.json"
+        )
+
+        $foundPath = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+        if ($foundPath) {
+            $filePath = $foundPath
+        }
+        else {
+            throw "File not found: $($paths -join ', ')"
+        }
+       
     }
 
     Context 'Constructor' {
@@ -40,7 +69,7 @@ Describe 'Contract Class' {
 
     Context 'LoadFromFile Method' {
         It 'should load contract from file correctly' {
-            $filePath = "$PSScriptRoot/../config/contract.json"
+           # $filePath = "$PSScriptRoot/config/contract.json"
             $contract = [Contract]::LoadFromFile($filePath)
             $contract | Should -Not -BeNull
             $contract.FirstName | Should -Be "Daniel"
