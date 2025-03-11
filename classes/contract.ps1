@@ -1,5 +1,5 @@
 # Load the bank holidays function
-. functions\bankholidays.ps1
+. "$PSScriptRoot/../functions\bankholidays.ps1"
 
 # Define the Workday class
 # This class represents a workday with properties for date, day of the week, start time, and end time.
