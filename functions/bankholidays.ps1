@@ -1,4 +1,4 @@
-. "classes\holiday.ps1"
+. "$PSScriptRoot\..\classes\holiday.ps1"
 
 function Get-RestDateFormat {
     return "yyyy-MM-dd"
