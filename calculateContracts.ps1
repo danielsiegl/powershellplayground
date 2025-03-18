@@ -17,6 +17,13 @@ if ($PSVersionTable.PSVersion.Major -lt 7) {
 $contract = [Contract]::LoadFromFile("config/Contract.json")
 $contractResult = $contract.Calculate()
 
+# loop throug contractresult to find the highest and lowewst month
+$highestMonth = $contractResult | Sort-Object -Property TotalCost -Descending | Select-Object -First 1
+$lowestMonth = $contractResult | Sort-Object -Property TotalCost | Select-Object -First 1
+
+Write-Output "Highest month: $($highestMonth.Month) - TotalCost: €$($highestMonth.TotalCost) - TotalSubsidy: €$($highestMonth.TotalSubsidy)"
+Write-Output "Lowest month: $($lowestMonth.Month) - TotalCost: €$($lowestMonth.TotalCost) - TotalSubsidy: €$($lowestMonth.TotalSubsidy)"
+
 Write-Output "Contract loaded: $($contract.FirstName) $($contract.LastName) - Year: $($contract.Year)"
 Write-Output "Morning cost per hour: €$($contract.MorningCostPerHour) - Morning subsidy per hour: €$($contract.MorningGovSubsidyPerHour)"
 
