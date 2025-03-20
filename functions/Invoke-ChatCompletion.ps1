@@ -8,12 +8,12 @@
         # Measure the execution time of the API call
         $startTime = Get-Date
         # Invoke the API with the updated prompt
-        $ResponseMessage = Invoke-ChatCompletion -Prompt $updatedPromptContent -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
+        $ResponseMessage = Invoke-ChatCompletion -Prompt $Prompt -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
         $endTime = Get-Date
         $executionTime = $endTime - $startTime
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
         $ResponseMessage[0] += " Model: $model Timestamp: $timestamp Length: $($ResponseMessage[1].Length) Exec. Time: $executionTime`r---"
-        
+
         return $ResponseMessage
     }
 
@@ -50,7 +50,7 @@
         $url = "$BaseUrl/chat/completions"
         Write-Output "Request URL: $url"
         $Response = Invoke-RestMethod -Uri $url  -Method Post -Headers $Headers -Body $Body
-        
+
         return $Response.choices[0].message.content
     } catch {
         Write-Error "The sample encountered an error: $_"

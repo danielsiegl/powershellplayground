@@ -28,11 +28,11 @@ Describe 'Contract Class' {
 
         if ($foundPath) {
             $filePath = $foundPath
+            . $filePath
         }
         else {
             throw "File not found: $($paths -join ', ')"
         }
-       
     }
 
     Context 'Constructor' {
