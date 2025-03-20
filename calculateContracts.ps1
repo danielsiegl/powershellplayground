@@ -1,4 +1,4 @@
-. "classes\contract.ps1"
+﻿. "classes\contract.ps1"
 . "functions\bankholidays.ps1"
 
 # Check if the execution directory is the script directory

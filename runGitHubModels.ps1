@@ -15,7 +15,7 @@ $model = "o3-mini" #"4o-mini" #"gpt-4o"  # Specify the model you want to use
 $prompt = "List all the keywords of the SysML V2 textual syntax"
 
 # Example usage
-Write-Host "Prompt: $prompt" -ForegroundColor Green
+Write-Output "Prompt: $prompt"
 $ResponseMessage = Invoke-ChatCompletion -Prompt $prompt -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
 Write-Output "$($ResponseMessage[0])"
-Write-Host "Response: $($ResponseMessage[1])" -ForegroundColor Yellow
+Write-Output "Response: $($ResponseMessage[1])"

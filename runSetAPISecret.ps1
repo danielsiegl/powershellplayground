@@ -3,7 +3,7 @@
 # Ensure you have the PnP PowerShell module installed
 if (-not (Get-Module -ListAvailable -Name PnP.PowerShell)) {
     Install-Module PnP.PowerShell -Scope CurrentUser -AllowPrerelease -SkipPublisherCheck
-} 
+}
 
 # Ask the User for the API secret
 Write-Output "Please enter your GitHub API secret: <ctrl+shift+v> to paste"
