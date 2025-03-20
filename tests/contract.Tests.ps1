@@ -18,21 +18,6 @@ Describe 'Contract Class' {
         else {
             throw "File not found: $($paths -join ', ')"
         }
-
-        $paths = @(
-            "$PSScriptRoot/config/contract.json",
-            "$PSScriptRoot/../config/contract.json"
-        )
-
-        $foundPath = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1
-
-        if ($foundPath) {
-            $filePath = $foundPath
-            Write-Output "File found: $filePath"
-        }
-        else {
-            throw "File not found: $($paths -join ', ')"
-        }
     }
 
     Context 'Constructor' {
@@ -69,11 +54,30 @@ Describe 'Contract Class' {
 
     Context 'LoadFromFile Method' {
         It 'should load contract from file correctly' {
+
+            # attention case sensitive on linux runner
+            $paths = @(
+                "$PSScriptRoot/config/contract.json",
+                "$PSScriptRoot/../config/contract.json",
+                "$PSScriptRoot/config/Contract.json",
+                "$PSScriptRoot/../config/Contract.json"
+            )
+
+            $foundPath = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+            if ($foundPath) {
+                $filePath = $foundPath
+                Write-Output "File found: $filePath"
+            }
+            else {
+                throw "File not found: $($paths -join ', ')"
+            }
+       
            # $filePath = "$PSScriptRoot/config/contract.json"
             $contract = [Contract]::LoadFromFile($filePath)
             $contract | Should -Not -BeNull
             $contract.FirstName | Should -Be "Daniel"
-            $contract.LastName | Should -Be "Siegl"
+            $contract.LastName | Should -Be "Testuser"
             $contract.Year | Should -Be "2025"
         }
     }
