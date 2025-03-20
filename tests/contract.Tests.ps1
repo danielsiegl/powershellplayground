@@ -28,7 +28,7 @@ Describe 'Contract Class' {
 
         if ($foundPath) {
             $filePath = $foundPath
-            . $filePath
+            Write-Output "File found: $filePath"
         }
         else {
             throw "File not found: $($paths -join ', ')"
