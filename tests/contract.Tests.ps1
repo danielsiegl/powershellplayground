@@ -72,8 +72,8 @@ Describe 'Contract Class' {
             else {
                 throw "File not found: $($paths -join ', ')"
             }
-       
-           # $filePath = "$PSScriptRoot/config/contract.json"
+
+            # $filePath = "$PSScriptRoot/config/contract.json"
             $contract = [Contract]::LoadFromFile($filePath)
             $contract | Should -Not -BeNull
             $contract.FirstName | Should -Be "Daniel"
