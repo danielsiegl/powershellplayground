@@ -8,14 +8,14 @@ if ($PSVersionTable.PSEdition -ne "Core") {
 . .\functions\Get-ApiToken.ps1
 . .\functions\Invoke-ChatCompletion.ps1
 
-$baseUrl = "https://api.openai.com/v1/"  #"https://models.inference.ai.azure.com"
+$baseUrl = "http://localhost:11434/v1"  #"https://models.inference.ai.azure.com"
 $apiKey = Get-ApiToken  # Ensure you have set this environment variable
-$model = "o3-mini" #"4o-mini" #"gpt-4o"  # Specify the model you want to use
+$model = "qwen2.5-coder:7b" #"4o-mini" #"gpt-4o"  # Specify the model you want to use
 
-$prompt = "List all the keywords of the SysML V2 textual syntax"
+$prompt = "What is the capital of France?"
 
 # Example usage
 Write-Output "Prompt: $prompt"
-$ResponseMessage = Invoke-ChatCompletion -Prompt $prompt -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
+$ResponseMessage = Invoke-ChatCompletionwithRuntimeInfo -Prompt $prompt -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
 Write-Output "$($ResponseMessage[0])"
 Write-Output "Response: $($ResponseMessage[1])"

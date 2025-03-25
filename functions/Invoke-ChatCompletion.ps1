@@ -1,4 +1,4 @@
-    function Invoke-ChatCompletionVerbose {
+    function Invoke-ChatCompletionwithRuntimeInfo {
     param (
         [string]$Prompt,
         [string]$ApiKey,
@@ -54,6 +54,9 @@
         return $Response.choices[0].message.content
     } catch {
         Write-Error "The sample encountered an error: $_"
+        Write-Error "with the following parameters:"
+        Write-Error "Prompt: $Prompt"
+        Write-Error "BaseUrl: $BaseUrl"
         throw
     }
 }
