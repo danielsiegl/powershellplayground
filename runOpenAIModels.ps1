@@ -16,6 +16,6 @@ $prompt = "What is the capital of France?"
 
 # Example usage
 Write-Output "Prompt: $prompt"
-$ResponseMessage = Invoke-ChatCompletionwithRuntimeInfo -Prompt $prompt -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
+$ResponseMessage = Invoke-ChatCompletion -Prompt $prompt -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
 Write-Output "$($ResponseMessage[0])"
 Write-Output "Response: $($ResponseMessage[1])"

@@ -1,22 +1,5 @@
-    function Invoke-ChatCompletionwithRuntimeInfo {
-    param (
-        [string]$Prompt,
-        [string]$ApiKey,
-        [string]$BaseUrl,
-        [string]$Model
-    )
-        # Measure the execution time of the API call
-        $startTime = Get-Date
-        # Invoke the API with the updated prompt
-        $ResponseMessage = Invoke-ChatCompletion -Prompt $Prompt -ApiKey $apiKey -BaseUrl $baseUrl -Model $model
-        $endTime = Get-Date
-        $executionTime = $endTime - $startTime
-        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-        $ResponseMessage[0] += " Model: $model Timestamp: $timestamp Length: $($ResponseMessage[1].Length) Exec. Time: $executionTime`r---"
-
-        return $ResponseMessage
-    }
-
+# This function sends a chat completion request to the OpenAI API.
+# It takes a prompt, API key, base URL, and model as parameters.
     function Invoke-ChatCompletion {
     param (
         [string]$Prompt,
