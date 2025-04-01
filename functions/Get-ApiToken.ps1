@@ -5,7 +5,8 @@ if (-not (Get-Module -ListAvailable -Name PnP.PowerShell)) {
 
 function Get-ApiToken {
     if (-not $env:CHATAPI_TOKEN) {
-        $apiSecret = Get-PnPStoredCredential -Name "https://github.com/syntdev/ai-commit-message-benchmarks/tree/main"
+        $secretUrl = git remote get-url origin
+        $apiSecret = Get-PnPStoredCredential -Name $secretUrl
         if (-not $apiSecret) {
             throw "API key is not set. runSetAPISecret.ps1 or set the CHATAPI_TOKEN environment variable."
         }

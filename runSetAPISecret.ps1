@@ -7,4 +7,6 @@ if (-not (Get-Module -ListAvailable -Name PnP.PowerShell)) {
 
 # Ask the User for the API secret
 Write-Output "Please enter your GitHub API secret: <ctrl+shift+v> to paste"
-Add-PnPStoredCredential -Name "https://github.com/syntdev/ai-commit-message-benchmarks/tree/main" -Username GITHUB_TOKEN -Password (Read-Host -Prompt "Enter your GitHub API secret" -AsSecureString)
+$secretUrl = git remote get-url origin
+write-output "Setting API secret for $secretUrl"
+Add-PnPStoredCredential -Name $secretUrl  -Username API_TOKEN -Password (Read-Host -Prompt "Enter your GitHub API secret" -AsSecureString)

@@ -8,9 +8,9 @@ if ($PSVersionTable.PSEdition -ne "Core") {
 . .\functions\Get-ApiToken.ps1
 . .\functions\Invoke-ChatCompletion.ps1
 
-$baseUrl = "http://localhost:11434/v1"  #"https://models.inference.ai.azure.com"
+$baseUrl = "https://api.openai.com/v1"  #"https://models.inference.ai.azure.com"
 $apiKey = Get-ApiToken  # Ensure you have set this environment variable
-$model = "qwen2.5-coder:7b" #"4o-mini" #"gpt-4o"  # Specify the model you want to use
+$model = "o3-mini" #"4o-mini" #"gpt-4o"  # Specify the model you want to use
 
 $prompt = "What is the capital of France?"
 
