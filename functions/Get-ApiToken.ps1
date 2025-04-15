@@ -13,6 +13,7 @@ function Get-ApiToken {
         # Convert the secure string to plain text it it is just a PAT so not too worried about it
         return ConvertFrom-SecureString -SecureString $apiSecret.Password -AsPlainText
     } else {
+        # If the environment variable is set, return it directly
         return $env:CHATAPI_TOKEN  # Ensure you have set this environment variable
     }
 }
