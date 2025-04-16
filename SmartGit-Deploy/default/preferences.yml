@@ -1,0 +1,13 @@
+showSetup: false
+actions:
+  commit: {messageLineLimits: true}
+logSettings:
+  loadGravatars: false
+sendStacktraces2: false
+sendUsageStats: false
+git:
+  maxCount: 3
+  alternatives: []
+  executable: ${smartgit.install}\git\bin\git.exe
+  executable.absolute: C:\Program Files\SmartGit\git\bin\git.exe
+  useOwnCredentialHelper: true 
