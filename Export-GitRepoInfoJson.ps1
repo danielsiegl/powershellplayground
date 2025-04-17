@@ -30,8 +30,13 @@ function Convert-GitStatusToDescription {
 # Function to get detailed commit information
 function Get-DetailedCommitInfo {
     param(
-        [string]$CommitHash
+        [string]$CommitHash,
+        [int]$CommitNumber,
+        [int]$TotalCommits,
+        [ref]$TotalFilesProcessed
     )
+    
+    Write-Progress -Activity "Processing Commits" -Status "Commit $CommitNumber of $TotalCommits" -PercentComplete (($CommitNumber / $TotalCommits) * 100)
     
     $commitInfo = git show --pretty=format:'%H|%an|%ae|%ad|%s' --date=iso --name-status $CommitHash
     $commitLines = $commitInfo -split "`n"
@@ -47,6 +52,7 @@ function Get-DetailedCommitInfo {
                 'status' = Convert-GitStatusToDescription -Status $statusCode
                 'path' = $matches[2]
             }
+            $TotalFilesProcessed.Value++
         }
     }
     
@@ -62,6 +68,9 @@ function Get-DetailedCommitInfo {
     }
 }
 
+Write-Host "Starting Git repository export..."
+Write-Host "Gathering repository information..."
+
 # Get repository information
 $repoInfo = @{
     'name' = (git rev-parse --show-toplevel | Split-Path -Leaf)
@@ -76,39 +85,89 @@ $repoInfo = @{
     }
 }
 
+Write-Host "Collecting branches..."
 # Get all branches
 $branches = git branch -a | ForEach-Object { $_.Trim() -replace '^\*?\s*' }
 $repoInfo.branches = $branches
 $repoInfo.statistics.total_branches = $branches.Count
+Write-Host "Found $($branches.Count) branches"
 
+Write-Host "Collecting tags..."
 # Get all tags
 $tags = git tag -l
 $repoInfo.tags = $tags
 $repoInfo.statistics.total_tags = $tags.Count
+Write-Host "Found $($tags.Count) tags"
 
+Write-Host "Collecting commits..."
 # Get all commits
 $commitHashes = git rev-list --all
 $repoInfo.statistics.total_commits = $commitHashes.Count
+Write-Host "Found $($commitHashes.Count) commits"
 
+# Get total number of files to process
+Write-Host "Counting total files to process..."
+$totalFiles = 0
+$commitCount = 0
+$totalCommits = $commitHashes.Count
+
+foreach ($commitHash in $commitHashes) {
+    $commitCount++
+    Write-Progress -Activity "Counting Files" -Status "Commit $commitCount of $totalCommits" -PercentComplete (($commitCount / $totalCommits) * 100)
+    
+    $fileChanges = git show --name-status $commitHash
+    $fileCount = ($fileChanges -split "`n" | Where-Object { $_ -match '^[A-Z]\s+.+$' }).Count
+    $totalFiles += $fileCount
+    
+    # Show progress every 100 commits
+    if ($commitCount % 100 -eq 0) {
+        Write-Host "Counted files in $commitCount of $totalCommits commits ($([math]::Round(($commitCount / $totalCommits) * 100))%)"
+    }
+}
+
+# Clear the counting progress bar
+Write-Progress -Activity "Counting Files" -Completed
+
+Write-Host "Found $totalFiles file changes to process"
+
+Write-Host "Processing commits and file changes..."
 # Process each commit
 $processedFiles = @{}
+$commitNumber = 0
+$filesProcessed = 0
 foreach ($commitHash in $commitHashes) {
-    $commitInfo = Get-DetailedCommitInfo -CommitHash $commitHash
+    $commitNumber++
+    $commitInfo = Get-DetailedCommitInfo -CommitHash $commitHash -CommitNumber $commitNumber -TotalCommits $commitHashes.Count -TotalFilesProcessed ([ref]$filesProcessed)
     $repoInfo.commits += $commitInfo
     
     # Track unique files
     foreach ($file in $commitInfo.files) {
         $processedFiles[$file.path] = $true
     }
+    
+    # Show progress every 100 commits
+    if ($commitNumber % 100 -eq 0) {
+        Write-Host "Processed $commitNumber of $($commitHashes.Count) commits ($([math]::Round(($commitNumber / $commitHashes.Count) * 100))%)"
+        Write-Host "Processed $filesProcessed of $totalFiles file changes ($([math]::Round(($filesProcessed / $totalFiles) * 100))%)"
+    }
+    
+    # Update file progress bar
+    Write-Progress -Activity "Processing Files" -Status "File $filesProcessed of $totalFiles" -PercentComplete (($filesProcessed / $totalFiles) * 100) -Id 1
 }
+
+# Clear the progress bars
+Write-Progress -Activity "Processing Commits" -Completed
+Write-Progress -Activity "Processing Files" -Completed -Id 1
 
 $repoInfo.statistics.total_files = $processedFiles.Count
 
+Write-Host "Exporting data to JSON..."
 # Export to JSON
 $repoInfo | ConvertTo-Json -Depth 10 | Out-File -FilePath $OutputPath -Encoding utf8
 
-Write-Host "Repository data exported to $OutputPath"
-Write-Host "Statistics:"
+Write-Host "`nRepository data export completed!"
+Write-Host "Output saved to: $OutputPath"
+Write-Host "`nStatistics:"
 Write-Host "- Total Commits: $($repoInfo.statistics.total_commits)"
 Write-Host "- Total Files: $($repoInfo.statistics.total_files)"
 Write-Host "- Total Branches: $($repoInfo.statistics.total_branches)"
