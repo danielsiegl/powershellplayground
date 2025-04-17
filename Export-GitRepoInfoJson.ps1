@@ -7,6 +7,26 @@ param(
     [string]$RepoPath = "."
 )
 
+# Function to convert Git status codes to human-readable descriptions
+function Convert-GitStatusToDescription {
+    param(
+        [string]$Status
+    )
+    
+    $statusMap = @{
+        'A' = 'Added'
+        'M' = 'Modified'
+        'D' = 'Deleted'
+        'R' = 'Renamed'
+        'C' = 'Copied'
+        'U' = 'Unmerged'
+        'T' = 'Type Changed'
+        'X' = 'Unknown'
+    }
+    
+    return $statusMap[$Status] ?? 'Unknown'
+}
+
 # Function to get detailed commit information
 function Get-DetailedCommitInfo {
     param(
@@ -21,8 +41,10 @@ function Get-DetailedCommitInfo {
     
     for ($i = 1; $i -lt $commitLines.Count; $i++) {
         if ($commitLines[$i] -match '^([A-Z])\s+(.+)$') {
+            $statusCode = $matches[1]
             $files += @{
-                'status' = $matches[1]
+                'status_code' = $statusCode
+                'status' = Convert-GitStatusToDescription -Status $statusCode
                 'path' = $matches[2]
             }
         }

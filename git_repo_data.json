@@ -12,6 +12,27 @@
   ],
   "commits": [
     {
+      "hash": "da5bc9e809688879e4ec77f86b1260866479c21e",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Hopefully this is finally better",
+      "files": [
+        {
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Export-GitRepoInfoJson.ps1"
+        },
+        {
+          "status_code": "A",
+          "status": "Added",
+          "path": "git_repo_data.json"
+        }
+      ],
+      "date": "2025-04-17 14:25:32 +0200"
+    },
+    {
       "hash": "35b06ca4c027bde64e420994f2434f099d8477ed",
       "author": {
         "name": "Daniel Siegl",
@@ -20,12 +41,14 @@
       "message": "Added Commit Data",
       "files": [
         {
-          "path": "Export-GitRepoInfoJson.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Export-GitRepoInfoJson.ps1"
         },
         {
-          "path": "git_repo_docs.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "git_repo_docs.json"
         }
       ],
       "date": "2025-04-17 14:05:17 +0200"
@@ -39,12 +62,14 @@
       "message": "Updated RAG Export",
       "files": [
         {
-          "path": "Export-GitRepoInfoJson.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Export-GitRepoInfoJson.ps1"
         },
         {
-          "path": "git_repo_docs.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "git_repo_docs.json"
         }
       ],
       "date": "2025-04-17 12:51:25 +0200"
@@ -58,12 +83,14 @@
       "message": "First version of RAG Export",
       "files": [
         {
-          "path": "Export-GitRepoInfoJson.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "Export-GitRepoInfoJson.ps1"
         },
         {
-          "path": "git_repo_docs.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "git_repo_docs.json"
         }
       ],
       "date": "2025-04-17 12:44:33 +0200"
@@ -77,12 +104,14 @@
       "message": "Add preferences.yml and setup-git.ps1 for git configuration",
       "files": [
         {
-          "path": "SmartGit-Deploy/default/preferences.yml",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "SmartGit-Deploy/default/preferences.yml"
         },
         {
-          "path": "SmartGit-Deploy/setup-git.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "SmartGit-Deploy/setup-git.ps1"
         }
       ],
       "date": "2025-04-16 18:13:09 +0200"
@@ -96,8 +125,9 @@
       "message": "Add comment to clarify retrieval of token from environment variable",
       "files": [
         {
-          "path": "functions/Get-ApiToken.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Get-ApiToken.ps1"
         }
       ],
       "date": "2025-04-15 09:08:08 +0200"
@@ -111,12 +141,14 @@
       "message": "Remove deprecated runtime info function and use Invoke-ChatCompletion",
       "files": [
         {
-          "path": "functions/Invoke-ChatCompletion.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Invoke-ChatCompletion.ps1"
         },
         {
-          "path": "runOpenAIModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runOpenAIModels.ps1"
         }
       ],
       "date": "2025-04-01 14:57:51 +0200"
@@ -130,16 +162,19 @@
       "message": "Switch API secret to git remote URL; remove legacy scripts",
       "files": [
         {
-          "path": "functions/Get-ApiToken.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Get-ApiToken.ps1"
         },
         {
-          "path": "runSetAPISecret.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runSetAPISecret.ps1"
         },
         {
-          "path": "runollama.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "runollama.ps1"
         }
       ],
       "date": "2025-04-01 14:55:56 +0200"
@@ -153,16 +188,19 @@
       "message": "Added runtime info to error messages and updated model and prompt in scripts",
       "files": [
         {
-          "path": "functions/Invoke-ChatCompletion.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Invoke-ChatCompletion.ps1"
         },
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         },
         {
-          "path": "runollama.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "runollama.ps1"
         }
       ],
       "date": "2025-03-25 15:39:22 +0100"
@@ -176,8 +214,9 @@
       "message": "Update prompt to ask about lift count in Obertauern",
       "files": [
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         }
       ],
       "date": "2025-03-25 12:12:25 +0100"
@@ -191,8 +230,9 @@
       "message": "Removed trailing white space",
       "files": [
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         }
       ],
       "date": "2025-03-22 13:02:19 +0100"
@@ -216,12 +256,14 @@
       "message": "renamed to be able to run tests on linux",
       "files": [
         {
-          "path": "config/Contract.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "config/Contract.json"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         }
       ],
       "date": "2025-03-20 20:37:45 +0100"
@@ -235,8 +277,9 @@
       "message": "Replace dot operator with Write-Output for file path logging",
       "files": [
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         }
       ],
       "date": "2025-03-20 20:33:01 +0100"
@@ -250,16 +293,19 @@
       "message": "Fixed linter problems",
       "files": [
         {
-          "path": "functions/Get-ApiToken.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Get-ApiToken.ps1"
         },
         {
-          "path": "functions/Invoke-ChatCompletion.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Invoke-ChatCompletion.ps1"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         }
       ],
       "date": "2025-03-20 20:28:10 +0100"
@@ -273,16 +319,19 @@
       "message": "Fix BOM, replace Write-Host and clean PowerShell script formatting",
       "files": [
         {
-          "path": "calculateContracts.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "calculateContracts.ps1"
         },
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         },
         {
-          "path": "runSetAPISecret.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runSetAPISecret.ps1"
         }
       ],
       "date": "2025-03-20 20:19:21 +0100"
@@ -296,8 +345,9 @@
       "message": "Update prompt to list SysML V2 textual syntax keywords",
       "files": [
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         }
       ],
       "date": "2025-03-20 20:09:34 +0100"
@@ -311,8 +361,9 @@
       "message": "Update API endpoint to OpenAI, fix prompt and output formatting",
       "files": [
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         }
       ],
       "date": "2025-03-20 18:41:23 +0100"
@@ -326,20 +377,24 @@
       "message": "Add API token, chat completion, and model integration scripts.",
       "files": [
         {
-          "path": "functions/Get-ApiToken.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "functions/Get-ApiToken.ps1"
         },
         {
-          "path": "functions/Invoke-ChatCompletion.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "functions/Invoke-ChatCompletion.ps1"
         },
         {
-          "path": "runGitHubModels.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "runGitHubModels.ps1"
         },
         {
-          "path": "runSetAPISecret.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "runSetAPISecret.ps1"
         }
       ],
       "date": "2025-03-20 18:21:28 +0100"
@@ -353,8 +408,9 @@
       "message": "Change output for highest and lowest contract months",
       "files": [
         {
-          "path": "calculateContracts.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "calculateContracts.ps1"
         }
       ],
       "date": "2025-03-19 16:59:09 +0100"
@@ -368,8 +424,9 @@
       "message": "Add calculation for highest and lowest contract months in script",
       "files": [
         {
-          "path": "calculateContracts.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "calculateContracts.ps1"
         }
       ],
       "date": "2025-03-18 19:11:14 +0100"
@@ -393,16 +450,19 @@
       "message": "Fix script path for loading class and config file in tests",
       "files": [
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         },
         {
-          "path": "tests/holiday.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/holiday.Tests.ps1"
         }
       ],
       "date": "2025-03-11 16:07:50 +0100"
@@ -416,32 +476,39 @@
       "message": "Add unit tests for HoliDay class in holiday.Tests.ps1",
       "files": [
         {
-          "path": "classes/contract.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "classes/contract.ps1"
         },
         {
-          "path": "functions/bankholidays.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/bankholidays.ps1"
         },
         {
-          "path": "tests/CostWindow.tests.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "tests/CostWindow.tests.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/contract.Tests.ps1"
         },
         {
-          "path": "tests/holiday.Tests.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/holiday.Tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "tests/person.tests.ps1"
         }
       ],
       "date": "2025-03-11 15:59:17 +0100"
@@ -465,12 +532,14 @@
       "message": "renamed to be able to run tests on linux",
       "files": [
         {
-          "path": "config/Contract.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "config/Contract.json"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         }
       ],
       "date": "2025-03-20 20:37:45 +0100"
@@ -484,8 +553,9 @@
       "message": "Replace dot operator with Write-Output for file path logging",
       "files": [
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         }
       ],
       "date": "2025-03-20 20:33:01 +0100"
@@ -499,16 +569,19 @@
       "message": "Fixed linter problems",
       "files": [
         {
-          "path": "functions/Get-ApiToken.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Get-ApiToken.ps1"
         },
         {
-          "path": "functions/Invoke-ChatCompletion.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/Invoke-ChatCompletion.ps1"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         }
       ],
       "date": "2025-03-20 20:28:10 +0100"
@@ -522,16 +595,19 @@
       "message": "Fix BOM, replace Write-Host and clean PowerShell script formatting",
       "files": [
         {
-          "path": "calculateContracts.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "calculateContracts.ps1"
         },
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         },
         {
-          "path": "runSetAPISecret.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runSetAPISecret.ps1"
         }
       ],
       "date": "2025-03-20 20:19:21 +0100"
@@ -545,8 +621,9 @@
       "message": "Update prompt to list SysML V2 textual syntax keywords",
       "files": [
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         }
       ],
       "date": "2025-03-20 20:09:34 +0100"
@@ -560,8 +637,9 @@
       "message": "Update API endpoint to OpenAI, fix prompt and output formatting",
       "files": [
         {
-          "path": "runGitHubModels.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "runGitHubModels.ps1"
         }
       ],
       "date": "2025-03-20 18:41:23 +0100"
@@ -575,20 +653,24 @@
       "message": "Add API token, chat completion, and model integration scripts.",
       "files": [
         {
-          "path": "functions/Get-ApiToken.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "functions/Get-ApiToken.ps1"
         },
         {
-          "path": "functions/Invoke-ChatCompletion.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "functions/Invoke-ChatCompletion.ps1"
         },
         {
-          "path": "runGitHubModels.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "runGitHubModels.ps1"
         },
         {
-          "path": "runSetAPISecret.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "runSetAPISecret.ps1"
         }
       ],
       "date": "2025-03-20 18:21:28 +0100"
@@ -602,8 +684,9 @@
       "message": "Change output for highest and lowest contract months",
       "files": [
         {
-          "path": "calculateContracts.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "calculateContracts.ps1"
         }
       ],
       "date": "2025-03-19 16:59:09 +0100"
@@ -617,8 +700,9 @@
       "message": "Add calculation for highest and lowest contract months in script",
       "files": [
         {
-          "path": "calculateContracts.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "calculateContracts.ps1"
         }
       ],
       "date": "2025-03-18 19:11:14 +0100"
@@ -642,16 +726,19 @@
       "message": "Fix script path for loading class and config file in tests",
       "files": [
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/contract.Tests.ps1"
         },
         {
-          "path": "tests/holiday.Tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/holiday.Tests.ps1"
         }
       ],
       "date": "2025-03-11 16:07:50 +0100"
@@ -665,32 +752,39 @@
       "message": "Add unit tests for HoliDay class in holiday.Tests.ps1",
       "files": [
         {
-          "path": "classes/contract.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "classes/contract.ps1"
         },
         {
-          "path": "functions/bankholidays.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "functions/bankholidays.ps1"
         },
         {
-          "path": "tests/CostWindow.tests.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "tests/CostWindow.tests.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/contract.Tests.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/contract.Tests.ps1"
         },
         {
-          "path": "tests/holiday.Tests.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/holiday.Tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "tests/person.tests.ps1"
         }
       ],
       "date": "2025-03-11 15:59:17 +0100"
@@ -704,16 +798,19 @@
       "message": "Update",
       "files": [
         {
-          "path": ".obsidian/.gitignore",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": ".obsidian/.gitignore"
         },
         {
-          "path": ".obsidian/app.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": ".obsidian/app.json"
         },
         {
-          "path": "README.md",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "README.md"
         }
       ],
       "date": "2025-03-13 21:28:03 +0100"
@@ -727,24 +824,29 @@
       "message": "#21 Restructured to be linter friendly  (#22)",
       "files": [
         {
-          "path": "calculateContract.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "calculateContract.ps1"
         },
         {
-          "path": "classes/contract.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "classes/contract.ps1"
         },
         {
-          "path": "classes/dailycost.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "classes/dailycost.ps1"
         },
         {
-          "path": "classes/monthlycost.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "classes/monthlycost.ps1"
         },
         {
-          "path": "classes/workday.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "classes/workday.ps1"
         }
       ],
       "date": "2025-03-09 22:22:53 +0100"
@@ -758,64 +860,79 @@
       "message": "16 fix linter reports and massive refactoring  (#20)",
       "files": [
         {
-          "path": "Modules/bankholidays.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "Modules/bankholidays.ps1"
         },
         {
-          "path": "Modules/person.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "Modules/person.ps1"
         },
         {
-          "path": "Modules/workday.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "Modules/workday.ps1"
         },
         {
-          "path": "Modules/workdaycost.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "Modules/workdaycost.ps1"
         },
         {
-          "path": "calculateContract.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "calculateContract.ps1"
         },
         {
-          "path": "classes/contract.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "classes/contract.ps1"
         },
         {
-          "path": "classes/holiday.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "classes/holiday.ps1"
         },
         {
-          "path": "classes/monthlycost.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "classes/monthlycost.ps1"
         },
         {
-          "path": "classes/workday.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "classes/workday.ps1"
         },
         {
-          "path": "createChild.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "createChild.ps1"
         },
         {
-          "path": "functions/bankholidays.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "functions/bankholidays.ps1"
         },
         {
-          "path": "output.md",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "output.md"
         },
         {
-          "path": "tests/CostWindow.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/CostWindow.tests.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/person.tests.ps1"
         }
       ],
       "date": "2025-03-09 11:41:28 +0100"
@@ -829,8 +946,9 @@
       "message": "Update GitHub Actions workflow to use default shell for PowerShell",
       "files": [
         {
-          "path": ".github/workflows/Validate.yml",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": ".github/workflows/Validate.yml"
         }
       ],
       "date": "2025-03-06 15:52:15 +0100"
@@ -844,52 +962,64 @@
       "message": "18 refactoring - simplified (#19)",
       "files": [
         {
-          "path": "Modules/bankholidays.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/bankholidays.ps1"
         },
         {
-          "path": "Modules/person.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/person.ps1"
         },
         {
-          "path": "Modules/workdaycost.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/workdaycost.ps1"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "daysArray.json",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "daysArray.json"
         },
         {
-          "path": "generateWorkdaysReport.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "generateWorkdaysReport.ps1"
         },
         {
-          "path": "holidays.json",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "holidays.json"
         },
         {
-          "path": "person.json",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "person.json"
         },
         {
-          "path": "schedule.json",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "schedule.json"
         },
         {
-          "path": "tests/CostWindow.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/CostWindow.tests.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/person.tests.ps1"
         }
       ],
       "date": "2025-03-06 15:46:50 +0100"
@@ -903,44 +1033,54 @@
       "message": "9 calculate the cost per day (#12)",
       "files": [
         {
-          "path": ".github/workflows/Validate.yml",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": ".github/workflows/Validate.yml"
         },
         {
-          "path": "Modules/CostWindow.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/CostWindow.ps1"
         },
         {
-          "path": "Modules/person.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/person.ps1"
         },
         {
-          "path": "Modules/workday.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/workday.ps1"
         },
         {
-          "path": "Modules/workdaycost.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "Modules/workdaycost.ps1"
         },
         {
-          "path": "child.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "child.json"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/person.tests.ps1"
         },
         {
-          "path": "workdaysByMonth.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "workdaysByMonth.json"
         }
       ],
       "date": "2025-03-06 12:57:42 +0100"
@@ -954,20 +1094,24 @@
       "message": "Add tests for CostWindow class and improve existing test setups #13 (#14)",
       "files": [
         {
-          "path": "tests/.gitignore",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/.gitignore"
         },
         {
-          "path": "tests/CostWindow.tests.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/CostWindow.tests.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/person.tests.ps1"
         }
       ],
       "date": "2025-03-05 21:35:04 +0100"
@@ -981,8 +1125,9 @@
       "message": "Implement CostWindow class for cost calculation #8 (#11)",
       "files": [
         {
-          "path": "Modules/CostWindow.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "Modules/CostWindow.ps1"
         }
       ],
       "date": "2025-03-05 17:20:46 +0100"
@@ -996,8 +1141,9 @@
       "message": ":sparkles: feat(pslint): Add markdown table generation and improve script (#6)",
       "files": [
         {
-          "path": "Tools/pslint.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Tools/pslint.ps1"
         }
       ],
       "date": "2025-03-03 16:26:58 +0100"
@@ -1011,8 +1157,9 @@
       "message": "Fix newline at end of file in createChild.ps1 (#5)",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-03-03 16:22:35 +0100"
@@ -1026,16 +1173,19 @@
       "message": "feat: Simplify holiday check logic in createChild.ps1 (#4)",
       "files": [
         {
-          "path": "child.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "child.json"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "output.md",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "output.md"
         }
       ],
       "date": "2025-03-03 16:19:52 +0100"
@@ -1049,12 +1199,14 @@
       "message": "feat: update child schedule and add workday report",
       "files": [
         {
-          "path": "child.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "child.json"
         },
         {
-          "path": "output.md",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "output.md"
         }
       ],
       "date": "2025-03-03 13:31:03 +0100"
@@ -1078,8 +1230,9 @@
       "message": "feat: Simplify holiday check logic in createChild.ps1",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-03-03 13:27:20 +0100"
@@ -1093,8 +1246,9 @@
       "message": "Remove demo content and consolidate path functions in Paths.ps1",
       "files": [
         {
-          "path": "Modules/Paths.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/Paths.ps1"
         }
       ],
       "date": "2025-02-25 11:38:08 +0100"
@@ -1108,8 +1262,9 @@
       "message": "feat(paths): add script to sort and update PATH",
       "files": [
         {
-          "path": "Modules/Paths.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "Modules/Paths.ps1"
         }
       ],
       "date": "2025-02-25 11:30:20 +0100"
@@ -1123,8 +1278,9 @@
       "message": "docs: add header comments for module descriptions and usage",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-25 11:29:10 +0100"
@@ -1138,16 +1294,19 @@
       "message": "Enhance person and workday modules with class definitions and functions",
       "files": [
         {
-          "path": "Modules/person.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/person.ps1"
         },
         {
-          "path": "Modules/workday.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/workday.ps1"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-24 09:37:26 +0100"
@@ -1161,8 +1320,9 @@
       "message": "Refactor script to load modules and introduce new classes",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-23 14:39:23 +0100"
@@ -1176,24 +1336,29 @@
       "message": "Add workday functionality and improve date handling in modules",
       "files": [
         {
-          "path": "Modules/bankholidays.psm1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/bankholidays.psm1"
         },
         {
-          "path": "Modules/person.psm1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/person.psm1"
         },
         {
-          "path": "Modules/workday.psm1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "Modules/workday.psm1"
         },
         {
-          "path": "child.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "child.json"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-20 14:24:34 +0100"
@@ -1207,8 +1372,9 @@
       "message": "Refactor createChild.ps1 to simplify output generation",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-20 14:06:49 +0100"
@@ -1222,8 +1388,9 @@
       "message": "Add markdown table output for workdays per month",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-20 13:57:10 +0100"
@@ -1237,16 +1404,19 @@
       "message": "Add JSON export for Austrian bank holidays and update child schedule",
       "files": [
         {
-          "path": "Modules/bankholidays.psm1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Modules/bankholidays.psm1"
         },
         {
-          "path": "child.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "child.json"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-19 11:19:11 +0100"
@@ -1260,8 +1430,9 @@
       "message": "Add holidays.json file with public holidays for 2025",
       "files": [
         {
-          "path": "holidays.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "holidays.json"
         }
       ],
       "date": "2025-02-19 11:18:58 +0100"
@@ -1275,8 +1446,9 @@
       "message": "Remove commented-out code and improve script clarity",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-19 10:46:48 +0100"
@@ -1290,12 +1462,14 @@
       "message": "Remove output and file save commands in createChild.ps1",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "workdaysByMonth.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "workdaysByMonth.json"
         }
       ],
       "date": "2025-02-19 10:44:44 +0100"
@@ -1309,24 +1483,29 @@
       "message": "Implement work schedule and JSON output for a child object",
       "files": [
         {
-          "path": "child.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "child.json"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "daysArray.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "daysArray.json"
         },
         {
-          "path": "person.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "person.json"
         },
         {
-          "path": "schedule.json",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "schedule.json"
         }
       ],
       "date": "2025-02-19 10:40:41 +0100"
@@ -1340,8 +1519,9 @@
       "message": "Add detailed comments to weekly work schedule",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-17 19:18:45 +0100"
@@ -1355,8 +1535,9 @@
       "message": "Improve schedule output formatting",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-17 12:36:53 +0100"
@@ -1370,8 +1551,9 @@
       "message": "Uncomment holiday and schedule processing in createChild.ps1",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-17 12:24:32 +0100"
@@ -1385,8 +1567,9 @@
       "message": "update",
       "files": [
         {
-          "path": "Tools/pslint.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "Tools/pslint.ps1"
         }
       ],
       "date": "2025-02-13 11:37:50 +0100"
@@ -1400,8 +1583,9 @@
       "message": "Removed white space",
       "files": [
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         }
       ],
       "date": "2025-02-11 14:47:25 +0100"
@@ -1415,44 +1599,54 @@
       "message": "Restructuring. Remove blanks Add Blanks to test linter Combined build in Validate.yml Some cosmetics",
       "files": [
         {
-          "path": ".github/workflows/PesterUnitTest.yml",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": ".github/workflows/PesterUnitTest.yml"
         },
         {
-          "path": ".github/workflows/PowerShellLinter.yml",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": ".github/workflows/PowerShellLinter.yml"
         },
         {
-          "path": ".github/workflows/Validate.yml",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": ".github/workflows/Validate.yml"
         },
         {
-          "path": "CheckFiles.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "CheckFiles.ps1"
         },
         {
-          "path": "Modules/person.psm1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "Modules/person.psm1"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "person.ps1",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "person.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "tests/person.tests.ps1"
         },
         {
-          "path": "tests/test_person.json",
-          "status": "D"
+          "status_code": "D",
+          "status": "Deleted",
+          "path": "tests/test_person.json"
         }
       ],
       "date": "2025-02-11 14:45:38 +0100"
@@ -1466,32 +1660,39 @@
       "message": "Updated Build Files Create PesterUnitTest.yml more tests Added first unittest bankholidays.tests.ps1",
       "files": [
         {
-          "path": ".github/workflows/PesterUnitTest.yml",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": ".github/workflows/PesterUnitTest.yml"
         },
         {
-          "path": ".github/workflows/PowerShellLinter.yml",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": ".github/workflows/PowerShellLinter.yml"
         },
         {
-          "path": "CheckFiles.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "CheckFiles.ps1"
         },
         {
-          "path": "bankholidays.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "bankholidays.ps1"
         },
         {
-          "path": "tests/bankholidays.tests.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/bankholidays.tests.ps1"
         },
         {
-          "path": "tests/person.tests.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/person.tests.ps1"
         },
         {
-          "path": "tests/test_person.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "tests/test_person.json"
         }
       ],
       "date": "2025-02-10 23:07:14 +0100"
@@ -1505,24 +1706,29 @@
       "message": "More Cleaning up to have a better linter result Cleaning up to have a better linter result",
       "files": [
         {
-          "path": ".github/workflows/PowerShellLinter.yml",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": ".github/workflows/PowerShellLinter.yml"
         },
         {
-          "path": "bankholidays.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "bankholidays.ps1"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "person.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "person.ps1"
         },
         {
-          "path": "pslint.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "pslint.ps1"
         }
       ],
       "date": "2025-02-10 22:24:12 +0100"
@@ -1536,24 +1742,29 @@
       "message": "Back to mandatory parameters in bankholidays.ps1 Added more logic to make the BankHolidays more useful",
       "files": [
         {
-          "path": "bankholidays.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "bankholidays.ps1"
         },
         {
-          "path": "createChild.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "createChild.ps1"
         },
         {
-          "path": "daysArray.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "daysArray.json"
         },
         {
-          "path": "person.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "person.json"
         },
         {
-          "path": "schedule.json",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "schedule.json"
         }
       ],
       "date": "2025-02-10 22:05:56 +0100"
@@ -1567,12 +1778,14 @@
       "message": "Updated Output Added Markdown Output to Job summary",
       "files": [
         {
-          "path": ".github/workflows/PowerShellLinter.yml",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": ".github/workflows/PowerShellLinter.yml"
         },
         {
-          "path": "pslint.ps1",
-          "status": "M"
+          "status_code": "M",
+          "status": "Modified",
+          "path": "pslint.ps1"
         }
       ],
       "date": "2025-02-10 21:36:34 +0100"
@@ -1586,24 +1799,29 @@
       "message": "Add some powershell samples",
       "files": [
         {
-          "path": ".github/workflows/PowerShellLinter.yml",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": ".github/workflows/PowerShellLinter.yml"
         },
         {
-          "path": "bankholidays.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "bankholidays.ps1"
         },
         {
-          "path": "createChild.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "createChild.ps1"
         },
         {
-          "path": "person.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "person.ps1"
         },
         {
-          "path": "pslint.ps1",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "pslint.ps1"
         }
       ],
       "date": "2025-02-10 21:20:58 +0100"
@@ -1617,8 +1835,9 @@
       "message": "Initial commit",
       "files": [
         {
-          "path": "README.md",
-          "status": "A"
+          "status_code": "A",
+          "status": "Added",
+          "path": "README.md"
         }
       ],
       "date": "2025-02-10 21:14:19 +0100"
@@ -1626,8 +1845,8 @@
   ],
   "statistics": {
     "total_branches": 9,
-    "total_files": 55,
-    "total_commits": 75,
+    "total_files": 56,
+    "total_commits": 76,
     "total_tags": 0
   },
   "tags": null,
