@@ -1,0 +1,1635 @@
+{
+  "branches": [
+    "RAG_AI",
+    "main",
+    "smartGit-deploy",
+    "remotes/origin/23-commit-message-testing",
+    "remotes/origin/HEAD -> origin/main",
+    "remotes/origin/RAG_AI",
+    "remotes/origin/ds-branch-2",
+    "remotes/origin/main",
+    "remotes/origin/smartGit-deploy"
+  ],
+  "commits": [
+    {
+      "hash": "35b06ca4c027bde64e420994f2434f099d8477ed",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Added Commit Data",
+      "files": [
+        {
+          "path": "Export-GitRepoInfoJson.ps1",
+          "status": "M"
+        },
+        {
+          "path": "git_repo_docs.json",
+          "status": "M"
+        }
+      ],
+      "date": "2025-04-17 14:05:17 +0200"
+    },
+    {
+      "hash": "40126263bab5b1451c8496fed51de35cade927fb",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Updated RAG Export",
+      "files": [
+        {
+          "path": "Export-GitRepoInfoJson.ps1",
+          "status": "M"
+        },
+        {
+          "path": "git_repo_docs.json",
+          "status": "M"
+        }
+      ],
+      "date": "2025-04-17 12:51:25 +0200"
+    },
+    {
+      "hash": "206fe9e4f38fa8cb41ca05c7dcd01242327191d6",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "First version of RAG Export",
+      "files": [
+        {
+          "path": "Export-GitRepoInfoJson.ps1",
+          "status": "A"
+        },
+        {
+          "path": "git_repo_docs.json",
+          "status": "A"
+        }
+      ],
+      "date": "2025-04-17 12:44:33 +0200"
+    },
+    {
+      "hash": "347e9c14592a81c243543ef204b349f0f50148fe",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Add preferences.yml and setup-git.ps1 for git configuration",
+      "files": [
+        {
+          "path": "SmartGit-Deploy/default/preferences.yml",
+          "status": "A"
+        },
+        {
+          "path": "SmartGit-Deploy/setup-git.ps1",
+          "status": "A"
+        }
+      ],
+      "date": "2025-04-16 18:13:09 +0200"
+    },
+    {
+      "hash": "1f479c04d0a93058f8702c4516ec68f876e5322d",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Add comment to clarify retrieval of token from environment variable",
+      "files": [
+        {
+          "path": "functions/Get-ApiToken.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-04-15 09:08:08 +0200"
+    },
+    {
+      "hash": "f538c0144279609646ff688d72151e719ee23899",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Remove deprecated runtime info function and use Invoke-ChatCompletion",
+      "files": [
+        {
+          "path": "functions/Invoke-ChatCompletion.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runOpenAIModels.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-04-01 14:57:51 +0200"
+    },
+    {
+      "hash": "62993f66d7d76ecbe2e28b90199ab7ffa076d9d4",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Switch API secret to git remote URL; remove legacy scripts",
+      "files": [
+        {
+          "path": "functions/Get-ApiToken.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runSetAPISecret.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runollama.ps1",
+          "status": "D"
+        }
+      ],
+      "date": "2025-04-01 14:55:56 +0200"
+    },
+    {
+      "hash": "8969208f04c5a118e144b79102e56e233a3ef641",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Added runtime info to error messages and updated model and prompt in scripts",
+      "files": [
+        {
+          "path": "functions/Invoke-ChatCompletion.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runollama.ps1",
+          "status": "A"
+        }
+      ],
+      "date": "2025-03-25 15:39:22 +0100"
+    },
+    {
+      "hash": "93578bcbc26e7fea91914cc64ca2016def41690b",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Update prompt to ask about lift count in Obertauern",
+      "files": [
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-25 12:12:25 +0100"
+    },
+    {
+      "hash": "fb04e5fba16682d6d71a3df7c59e0faacfa3434a",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Removed trailing white space",
+      "files": [
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-22 13:02:19 +0100"
+    },
+    {
+      "hash": "0ec24133ea05812a1f9f828064f7f947572d31a0",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Rename Contract.json to contract.json in config directory",
+      "files": [],
+      "date": "2025-03-21 11:11:55 +0100"
+    },
+    {
+      "hash": "5056e5dbda340f9a4336c32b1e48cb89f66246a8",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "renamed to be able to run tests on linux",
+      "files": [
+        {
+          "path": "config/Contract.json",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:37:45 +0100"
+    },
+    {
+      "hash": "a512cd7550fdc47c65999defe7073cf110887644",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Replace dot operator with Write-Output for file path logging",
+      "files": [
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:33:01 +0100"
+    },
+    {
+      "hash": "0fccb5450441076f8952e4eac996dcb1d294d872",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Fixed linter problems",
+      "files": [
+        {
+          "path": "functions/Get-ApiToken.ps1",
+          "status": "M"
+        },
+        {
+          "path": "functions/Invoke-ChatCompletion.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:28:10 +0100"
+    },
+    {
+      "hash": "d8d0d1cd0b57830e69f8b200f8cee278b69c053a",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Fix BOM, replace Write-Host and clean PowerShell script formatting",
+      "files": [
+        {
+          "path": "calculateContracts.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runSetAPISecret.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:19:21 +0100"
+    },
+    {
+      "hash": "d091340a3f0ca179aef91354a71360241592a30d",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Update prompt to list SysML V2 textual syntax keywords",
+      "files": [
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:09:34 +0100"
+    },
+    {
+      "hash": "2530e8ba774975d484687c8f19f6012e49a3fe39",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Update API endpoint to OpenAI, fix prompt and output formatting",
+      "files": [
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 18:41:23 +0100"
+    },
+    {
+      "hash": "eaacc0590dfaf968b56fb06ffc0ce8f6c6ccf9bc",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add API token, chat completion, and model integration scripts.",
+      "files": [
+        {
+          "path": "functions/Get-ApiToken.ps1",
+          "status": "A"
+        },
+        {
+          "path": "functions/Invoke-ChatCompletion.ps1",
+          "status": "A"
+        },
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "A"
+        },
+        {
+          "path": "runSetAPISecret.ps1",
+          "status": "A"
+        }
+      ],
+      "date": "2025-03-20 18:21:28 +0100"
+    },
+    {
+      "hash": "0cf58fc3cc4651305ba9624d4a3fc672eeac2e00",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Change output for highest and lowest contract months",
+      "files": [
+        {
+          "path": "calculateContracts.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-19 16:59:09 +0100"
+    },
+    {
+      "hash": "79ca0738029fc8e56d337a08c42fbfce2f3e4969",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add calculation for highest and lowest contract months in script",
+      "files": [
+        {
+          "path": "calculateContracts.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-18 19:11:14 +0100"
+    },
+    {
+      "hash": "493170b716716259cfd1653bf22eb94fb90daed6",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Rename calculateContract.ps1 to calculateContracts.ps1",
+      "files": [],
+      "date": "2025-03-15 20:34:40 +0100"
+    },
+    {
+      "hash": "1b82e7a8c5fb53c5f2bf84f0f2dc44d749de80d0",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Fix script path for loading class and config file in tests",
+      "files": [
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/holiday.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-11 16:07:50 +0100"
+    },
+    {
+      "hash": "ac3cd61d4dda03c52063e964e808977b979d95fb",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Add unit tests for HoliDay class in holiday.Tests.ps1",
+      "files": [
+        {
+          "path": "classes/contract.ps1",
+          "status": "M"
+        },
+        {
+          "path": "functions/bankholidays.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/CostWindow.tests.ps1",
+          "status": "D"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "A"
+        },
+        {
+          "path": "tests/holiday.Tests.ps1",
+          "status": "A"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "D"
+        }
+      ],
+      "date": "2025-03-11 15:59:17 +0100"
+    },
+    {
+      "hash": "51a0a3a770c3c3c99592d58da89dde5cff8d49e9",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Rename Contract.json to contract.json in config directory",
+      "files": [],
+      "date": "2025-03-21 11:11:55 +0100"
+    },
+    {
+      "hash": "b1e2733c4f16cf25ce9208c1646d707c0ee7a609",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "renamed to be able to run tests on linux",
+      "files": [
+        {
+          "path": "config/Contract.json",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:37:45 +0100"
+    },
+    {
+      "hash": "91b4b85c0b839e48346e00648b2103a7347fc1dc",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Replace dot operator with Write-Output for file path logging",
+      "files": [
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:33:01 +0100"
+    },
+    {
+      "hash": "d81b1475c9056dae76d4ab548134aba20afad3b6",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Fixed linter problems",
+      "files": [
+        {
+          "path": "functions/Get-ApiToken.ps1",
+          "status": "M"
+        },
+        {
+          "path": "functions/Invoke-ChatCompletion.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:28:10 +0100"
+    },
+    {
+      "hash": "401223e147d353d2219df5124530bcf6cb1913aa",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Fix BOM, replace Write-Host and clean PowerShell script formatting",
+      "files": [
+        {
+          "path": "calculateContracts.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        },
+        {
+          "path": "runSetAPISecret.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:19:21 +0100"
+    },
+    {
+      "hash": "829845fc15f16d2c67b4e402547437707e78c583",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Update prompt to list SysML V2 textual syntax keywords",
+      "files": [
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 20:09:34 +0100"
+    },
+    {
+      "hash": "7154f1406b5926ca0dd22ff688e13ba7b37e28c7",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Update API endpoint to OpenAI, fix prompt and output formatting",
+      "files": [
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-20 18:41:23 +0100"
+    },
+    {
+      "hash": "96f5ba8362cca09d6b0aa545ce282c1ebd076e0a",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add API token, chat completion, and model integration scripts.",
+      "files": [
+        {
+          "path": "functions/Get-ApiToken.ps1",
+          "status": "A"
+        },
+        {
+          "path": "functions/Invoke-ChatCompletion.ps1",
+          "status": "A"
+        },
+        {
+          "path": "runGitHubModels.ps1",
+          "status": "A"
+        },
+        {
+          "path": "runSetAPISecret.ps1",
+          "status": "A"
+        }
+      ],
+      "date": "2025-03-20 18:21:28 +0100"
+    },
+    {
+      "hash": "bd58653db138cbf8aad58494875871e31a07d269",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Change output for highest and lowest contract months",
+      "files": [
+        {
+          "path": "calculateContracts.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-19 16:59:09 +0100"
+    },
+    {
+      "hash": "d214c0dc9b3441ec189e4259e04d6ec3f936fd89",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add calculation for highest and lowest contract months in script",
+      "files": [
+        {
+          "path": "calculateContracts.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-18 19:11:14 +0100"
+    },
+    {
+      "hash": "0dc47a41a9325d711dfd3df9550294cecd41672c",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Rename calculateContract.ps1 to calculateContracts.ps1",
+      "files": [],
+      "date": "2025-03-15 20:34:40 +0100"
+    },
+    {
+      "hash": "4fff8a7c5cc09fcad3774565cbc05b53c8fa12eb",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Fix script path for loading class and config file in tests",
+      "files": [
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/holiday.Tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-11 16:07:50 +0100"
+    },
+    {
+      "hash": "e5ed99beaa5e9e7ebf4c8b62d1d87eb900d101bb",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Add unit tests for HoliDay class in holiday.Tests.ps1",
+      "files": [
+        {
+          "path": "classes/contract.ps1",
+          "status": "M"
+        },
+        {
+          "path": "functions/bankholidays.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/CostWindow.tests.ps1",
+          "status": "D"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/contract.Tests.ps1",
+          "status": "A"
+        },
+        {
+          "path": "tests/holiday.Tests.ps1",
+          "status": "A"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "D"
+        }
+      ],
+      "date": "2025-03-11 15:59:17 +0100"
+    },
+    {
+      "hash": "29c612543d19aade86f10d487433e0680e816bf9",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Update",
+      "files": [
+        {
+          "path": ".obsidian/.gitignore",
+          "status": "A"
+        },
+        {
+          "path": ".obsidian/app.json",
+          "status": "A"
+        },
+        {
+          "path": "README.md",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-13 21:28:03 +0100"
+    },
+    {
+      "hash": "1c6224ee8f9a2e9ec850d5236cd8530c2abc9c11",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "#21 Restructured to be linter friendly  (#22)",
+      "files": [
+        {
+          "path": "calculateContract.ps1",
+          "status": "M"
+        },
+        {
+          "path": "classes/contract.ps1",
+          "status": "M"
+        },
+        {
+          "path": "classes/dailycost.ps1",
+          "status": "D"
+        },
+        {
+          "path": "classes/monthlycost.ps1",
+          "status": "D"
+        },
+        {
+          "path": "classes/workday.ps1",
+          "status": "D"
+        }
+      ],
+      "date": "2025-03-09 22:22:53 +0100"
+    },
+    {
+      "hash": "deaf9bdc8e397b89469b4a6bc6a5d2d1823c4be6",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "16 fix linter reports and massive refactoring  (#20)",
+      "files": [
+        {
+          "path": "Modules/bankholidays.ps1",
+          "status": "D"
+        },
+        {
+          "path": "Modules/person.ps1",
+          "status": "D"
+        },
+        {
+          "path": "Modules/workday.ps1",
+          "status": "D"
+        },
+        {
+          "path": "Modules/workdaycost.ps1",
+          "status": "D"
+        },
+        {
+          "path": "calculateContract.ps1",
+          "status": "A"
+        },
+        {
+          "path": "classes/contract.ps1",
+          "status": "A"
+        },
+        {
+          "path": "classes/holiday.ps1",
+          "status": "A"
+        },
+        {
+          "path": "classes/monthlycost.ps1",
+          "status": "A"
+        },
+        {
+          "path": "classes/workday.ps1",
+          "status": "A"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "D"
+        },
+        {
+          "path": "functions/bankholidays.ps1",
+          "status": "A"
+        },
+        {
+          "path": "output.md",
+          "status": "D"
+        },
+        {
+          "path": "tests/CostWindow.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-09 11:41:28 +0100"
+    },
+    {
+      "hash": "aa4c6c2ecf700f53c9edb88ad657c040b32b86a9",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "Update GitHub Actions workflow to use default shell for PowerShell",
+      "files": [
+        {
+          "path": ".github/workflows/Validate.yml",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-06 15:52:15 +0100"
+    },
+    {
+      "hash": "e763f0f3210b560492328da02c6c23a8d8f82966",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "18 refactoring - simplified (#19)",
+      "files": [
+        {
+          "path": "Modules/bankholidays.ps1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/person.ps1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/workdaycost.ps1",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "daysArray.json",
+          "status": "D"
+        },
+        {
+          "path": "generateWorkdaysReport.ps1",
+          "status": "A"
+        },
+        {
+          "path": "holidays.json",
+          "status": "D"
+        },
+        {
+          "path": "person.json",
+          "status": "D"
+        },
+        {
+          "path": "schedule.json",
+          "status": "D"
+        },
+        {
+          "path": "tests/CostWindow.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-06 15:46:50 +0100"
+    },
+    {
+      "hash": "b22c0353d56145ca6abdf9571b0a1be2bb3012e0",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "9 calculate the cost per day (#12)",
+      "files": [
+        {
+          "path": ".github/workflows/Validate.yml",
+          "status": "M"
+        },
+        {
+          "path": "Modules/CostWindow.ps1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/person.ps1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/workday.ps1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/workdaycost.ps1",
+          "status": "A"
+        },
+        {
+          "path": "child.json",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "workdaysByMonth.json",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-06 12:57:42 +0100"
+    },
+    {
+      "hash": "06500ac7220caef84ebb6401d8e281a3855d054d",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "Add tests for CostWindow class and improve existing test setups #13 (#14)",
+      "files": [
+        {
+          "path": "tests/.gitignore",
+          "status": "A"
+        },
+        {
+          "path": "tests/CostWindow.tests.ps1",
+          "status": "A"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-05 21:35:04 +0100"
+    },
+    {
+      "hash": "ba6b0de0106d0a55253c32c596c46db5fc884a51",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "Implement CostWindow class for cost calculation #8 (#11)",
+      "files": [
+        {
+          "path": "Modules/CostWindow.ps1",
+          "status": "A"
+        }
+      ],
+      "date": "2025-03-05 17:20:46 +0100"
+    },
+    {
+      "hash": "5749a3cfb39851994e6c726eb6acabe1047b67ea",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": ":sparkles: feat(pslint): Add markdown table generation and improve script (#6)",
+      "files": [
+        {
+          "path": "Tools/pslint.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-03 16:26:58 +0100"
+    },
+    {
+      "hash": "b188b848b1ffe2cac472a5c2e99c363f7ab7d59e",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "Fix newline at end of file in createChild.ps1 (#5)",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-03 16:22:35 +0100"
+    },
+    {
+      "hash": "476a7ada739982df38d1d990c95a35d65aadd467",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "feat: Simplify holiday check logic in createChild.ps1 (#4)",
+      "files": [
+        {
+          "path": "child.json",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "output.md",
+          "status": "A"
+        }
+      ],
+      "date": "2025-03-03 16:19:52 +0100"
+    },
+    {
+      "hash": "55bdf7a3e1d0da99181ece357feb185a6c54c95d",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "feat: update child schedule and add workday report",
+      "files": [
+        {
+          "path": "child.json",
+          "status": "M"
+        },
+        {
+          "path": "output.md",
+          "status": "A"
+        }
+      ],
+      "date": "2025-03-03 13:31:03 +0100"
+    },
+    {
+      "hash": "beb06246a29fd882074f72f08912c939e313aaa1",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "",
+      "files": [],
+      "date": "2025-03-03 13:31:17 +0100"
+    },
+    {
+      "hash": "c0b1e449f7889aa6408b7491d18453b9d21bbebb",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@syntevo.com"
+      },
+      "message": "feat: Simplify holiday check logic in createChild.ps1",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-03-03 13:27:20 +0100"
+    },
+    {
+      "hash": "f6c4d3bb965648879ebde77fa81ec90f590df2fb",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Remove demo content and consolidate path functions in Paths.ps1",
+      "files": [
+        {
+          "path": "Modules/Paths.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-25 11:38:08 +0100"
+    },
+    {
+      "hash": "742c266127635d6a5e3f68250271277f5c425100",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "feat(paths): add script to sort and update PATH",
+      "files": [
+        {
+          "path": "Modules/Paths.ps1",
+          "status": "A"
+        }
+      ],
+      "date": "2025-02-25 11:30:20 +0100"
+    },
+    {
+      "hash": "86fb38f691af4895cac9cc9e501387fbdd27d7e5",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "docs: add header comments for module descriptions and usage",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-25 11:29:10 +0100"
+    },
+    {
+      "hash": "d75005d5ea444b3a16c07f6aa2992d21ccab0647",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Enhance person and workday modules with class definitions and functions",
+      "files": [
+        {
+          "path": "Modules/person.ps1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/workday.ps1",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-24 09:37:26 +0100"
+    },
+    {
+      "hash": "5973ecf6212727be8a710b2cbb97d2cded983876",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Refactor script to load modules and introduce new classes",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-23 14:39:23 +0100"
+    },
+    {
+      "hash": "1d50f34d80552ccf91450f2f798e9e7ae5e31de4",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add workday functionality and improve date handling in modules",
+      "files": [
+        {
+          "path": "Modules/bankholidays.psm1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/person.psm1",
+          "status": "M"
+        },
+        {
+          "path": "Modules/workday.psm1",
+          "status": "A"
+        },
+        {
+          "path": "child.json",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-20 14:24:34 +0100"
+    },
+    {
+      "hash": "b8ee183178dee6325547f727fc6686b0d6716bc0",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Refactor createChild.ps1 to simplify output generation",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-20 14:06:49 +0100"
+    },
+    {
+      "hash": "07ba24c053966ac3c9fe36f6065072764a838a63",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add markdown table output for workdays per month",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-20 13:57:10 +0100"
+    },
+    {
+      "hash": "9522385539d4990fe042a0674a8a09b0b0e2bf56",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add JSON export for Austrian bank holidays and update child schedule",
+      "files": [
+        {
+          "path": "Modules/bankholidays.psm1",
+          "status": "M"
+        },
+        {
+          "path": "child.json",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-19 11:19:11 +0100"
+    },
+    {
+      "hash": "76f537c35390c200c6d0c523acc87df479a59145",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add holidays.json file with public holidays for 2025",
+      "files": [
+        {
+          "path": "holidays.json",
+          "status": "A"
+        }
+      ],
+      "date": "2025-02-19 11:18:58 +0100"
+    },
+    {
+      "hash": "7a0173bfe537d32ef424eaa40952aa110e470918",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Remove commented-out code and improve script clarity",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-19 10:46:48 +0100"
+    },
+    {
+      "hash": "ecad8a3f56b0bdaf51c8825aa7c3bf8f40cf494d",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Remove output and file save commands in createChild.ps1",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "workdaysByMonth.json",
+          "status": "A"
+        }
+      ],
+      "date": "2025-02-19 10:44:44 +0100"
+    },
+    {
+      "hash": "19a10db0a01563d010fcd8af41959ed7725ae63b",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Implement work schedule and JSON output for a child object",
+      "files": [
+        {
+          "path": "child.json",
+          "status": "A"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "daysArray.json",
+          "status": "M"
+        },
+        {
+          "path": "person.json",
+          "status": "M"
+        },
+        {
+          "path": "schedule.json",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-19 10:40:41 +0100"
+    },
+    {
+      "hash": "3e791b25b6be8bdd12f023718b711fb6c90a9a2a",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add detailed comments to weekly work schedule",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-17 19:18:45 +0100"
+    },
+    {
+      "hash": "32ddfc39d6d0049042ff209bce2b8dc302b7541e",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Improve schedule output formatting",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-17 12:36:53 +0100"
+    },
+    {
+      "hash": "e30c32cc1620bece5a6b641126864a4d342cbbdd",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Uncomment holiday and schedule processing in createChild.ps1",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-17 12:24:32 +0100"
+    },
+    {
+      "hash": "4219925135c2c226864c34694f3a68ec3151aa79",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "update",
+      "files": [
+        {
+          "path": "Tools/pslint.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-13 11:37:50 +0100"
+    },
+    {
+      "hash": "79bc0741506177b27a82fc7676bab5ae5a5f74b0",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Removed white space",
+      "files": [
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-11 14:47:25 +0100"
+    },
+    {
+      "hash": "987061319f1d053aabec8f57d2ef1b66c74107df",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Restructuring. Remove blanks Add Blanks to test linter Combined build in Validate.yml Some cosmetics",
+      "files": [
+        {
+          "path": ".github/workflows/PesterUnitTest.yml",
+          "status": "D"
+        },
+        {
+          "path": ".github/workflows/PowerShellLinter.yml",
+          "status": "D"
+        },
+        {
+          "path": ".github/workflows/Validate.yml",
+          "status": "A"
+        },
+        {
+          "path": "CheckFiles.ps1",
+          "status": "D"
+        },
+        {
+          "path": "Modules/person.psm1",
+          "status": "A"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "person.ps1",
+          "status": "D"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/test_person.json",
+          "status": "D"
+        }
+      ],
+      "date": "2025-02-11 14:45:38 +0100"
+    },
+    {
+      "hash": "e2d5d91be8629ff5c8d233f9a8323aba311e5c7b",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Updated Build Files Create PesterUnitTest.yml more tests Added first unittest bankholidays.tests.ps1",
+      "files": [
+        {
+          "path": ".github/workflows/PesterUnitTest.yml",
+          "status": "A"
+        },
+        {
+          "path": ".github/workflows/PowerShellLinter.yml",
+          "status": "M"
+        },
+        {
+          "path": "CheckFiles.ps1",
+          "status": "A"
+        },
+        {
+          "path": "bankholidays.ps1",
+          "status": "M"
+        },
+        {
+          "path": "tests/bankholidays.tests.ps1",
+          "status": "A"
+        },
+        {
+          "path": "tests/person.tests.ps1",
+          "status": "A"
+        },
+        {
+          "path": "tests/test_person.json",
+          "status": "A"
+        }
+      ],
+      "date": "2025-02-10 23:07:14 +0100"
+    },
+    {
+      "hash": "e5a6535ca6078f5d6fdbc8fbace6f04e48d9bde1",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "More Cleaning up to have a better linter result Cleaning up to have a better linter result",
+      "files": [
+        {
+          "path": ".github/workflows/PowerShellLinter.yml",
+          "status": "M"
+        },
+        {
+          "path": "bankholidays.ps1",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "person.ps1",
+          "status": "M"
+        },
+        {
+          "path": "pslint.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-10 22:24:12 +0100"
+    },
+    {
+      "hash": "752d7d3d41eccafcc62c80948e7576d83ed424d6",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Back to mandatory parameters in bankholidays.ps1 Added more logic to make the BankHolidays more useful",
+      "files": [
+        {
+          "path": "bankholidays.ps1",
+          "status": "M"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "M"
+        },
+        {
+          "path": "daysArray.json",
+          "status": "A"
+        },
+        {
+          "path": "person.json",
+          "status": "A"
+        },
+        {
+          "path": "schedule.json",
+          "status": "A"
+        }
+      ],
+      "date": "2025-02-10 22:05:56 +0100"
+    },
+    {
+      "hash": "dc0e5cb29e083f191fc12f493404c160f88d8a4c",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Updated Output Added Markdown Output to Job summary",
+      "files": [
+        {
+          "path": ".github/workflows/PowerShellLinter.yml",
+          "status": "M"
+        },
+        {
+          "path": "pslint.ps1",
+          "status": "M"
+        }
+      ],
+      "date": "2025-02-10 21:36:34 +0100"
+    },
+    {
+      "hash": "206e58d3f7c51c2f5693fa56130501f4fd05de13",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "daniel.siegl@lieberlieber.com"
+      },
+      "message": "Add some powershell samples",
+      "files": [
+        {
+          "path": ".github/workflows/PowerShellLinter.yml",
+          "status": "A"
+        },
+        {
+          "path": "bankholidays.ps1",
+          "status": "A"
+        },
+        {
+          "path": "createChild.ps1",
+          "status": "A"
+        },
+        {
+          "path": "person.ps1",
+          "status": "A"
+        },
+        {
+          "path": "pslint.ps1",
+          "status": "A"
+        }
+      ],
+      "date": "2025-02-10 21:20:58 +0100"
+    },
+    {
+      "hash": "24f9fbbb200a20c18a9372e7e839f8232c074a40",
+      "author": {
+        "name": "Daniel Siegl",
+        "email": "41949368+danielsiegl@users.noreply.github.com"
+      },
+      "message": "Initial commit",
+      "files": [
+        {
+          "path": "README.md",
+          "status": "A"
+        }
+      ],
+      "date": "2025-02-10 21:14:19 +0100"
+    }
+  ],
+  "statistics": {
+    "total_branches": 9,
+    "total_files": 55,
+    "total_commits": 75,
+    "total_tags": 0
+  },
+  "tags": null,
+  "name": "powershellplayground"
+}
