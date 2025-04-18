@@ -6,9 +6,9 @@
 . ./functions/Get-ApiToken.ps1
 
 # ---------- configuration ----------
-$apiKey   = Get-ApiToken
+$apiKey = Get-ApiToken
 $filePath = "git_repo_data.json"
-$model    = "gpt-4-1106-preview"
+$model = "gpt-4-turbo-preview"
 
 # ---------- common headers ----------
 $authHeaders = @{ 
@@ -16,49 +16,80 @@ $authHeaders = @{
     "Content-Type" = "application/json"
 }
 
+function Invoke-OpenAIRequest {
+    param (
+        [string]$Question,
+        [string]$JsonData
+    )
+
+    $requestBody = @{
+        model = $SCRIPT:model
+        messages = @(
+            @{
+                role = "system"
+                content = "You are a helpful assistant that provides concise, direct answers to questions about git repository data. Focus on answering the specific question asked without additional explanation or code examples unless explicitly requested."
+            },
+            @{
+                role = "user"
+                content = "Here is the git repository data: $JsonData"
+            },
+            @{
+                role = "user"
+                content = $Question
+            }
+        )
+        temperature = 0.7
+        max_tokens = 150
+    } | ConvertTo-Json -Depth 10
+
+    try {
+        $response = Invoke-RestMethod `
+            -Uri "https://api.openai.com/v1/chat/completions" `
+            -Method Post `
+            -Headers $SCRIPT:authHeaders `
+            -Body $requestBody
+
+        return $response.choices[0].message.content.Trim()
+    }
+    catch {
+        if ($_.Exception.Response) {
+            $errorDetails = $_.ErrorDetails.Message | ConvertFrom-Json
+            if ($errorDetails.error.code -eq "rate_limit_exceeded") {
+                $retryAfter = [int]($errorDetails.error.message -replace '.*try again in (\d+).*', '$1')
+                Write-Host "Rate limit reached. Waiting $retryAfter seconds..."
+                Start-Sleep -Seconds $retryAfter
+                return Invoke-OpenAIRequest -Question $Question -JsonData $JsonData
+            }
+        }
+        Write-Error "Error querying OpenAI: $_"
+        return $null
+    }
+}
+
 try {
     # Read the JSON file content
     $fileContent = Get-Content -Path $filePath -Raw
 
-    # Prepare the chat completion request
-    $chatBody = @{
-        model = $model
-        messages = @(
-            @{
-                role = "system"
-                content = "You are a helpful assistant that analyzes git repository data. You will be given JSON data about a git repository and should analyze it to answer questions about commit patterns and repository activity."
-            },
-            @{
-                role = "user"
-                content = "Here is the git repository data: $fileContent"
-            },
-            @{
-                role = "user"
-                content = "How many commits happened on a Monday? just answer with a number"
-            }
-        )
-        temperature = 0.7
-    } | ConvertTo-Json -Depth 10
+    # Example queries
+    $queries = @(
+        "How many commits happened on a Monday? Just answer with a number.",
+        "What is the most active day of the week for commits?",
+        "Who are the top 3 contributors by number of commits?"
+    )
 
-    # Make the API call
-    Write-Host "Sending request to OpenAI..."
-    $response = Invoke-RestMethod `
-        -Uri "https://api.openai.com/v1/chat/completions" `
-        -Method Post `
-        -Headers $authHeaders `
-        -Body $chatBody
-
-    # Display the response
-    Write-Host "`nAnswer:"
-    $response.choices[0].message.content
+    foreach ($query in $queries) {
+        Write-Host "`nQuestion: $query"
+        $answer = Invoke-OpenAIRequest -Question $query -JsonData $fileContent
+        Write-Host "Answer: $answer"
+        
+        # Add a small delay between requests to avoid rate limits
+        Start-Sleep -Seconds 2
+    }
 
 } catch {
     Write-Error "An error occurred: $_"
     if ($_.Exception.Response) {
-        $errorResponse = $_.Exception.Response.GetResponseStream()
-        $reader = New-Object System.IO.StreamReader($errorResponse)
-        $reader.BaseStream.Position = 0
-        $reader.DiscardBufferedData()
-        Write-Error "Response body: $($reader.ReadToEnd())"
+        $errorDetails = $_.ErrorDetails.Message
+        Write-Error "Response body: $errorDetails"
     }
 }
