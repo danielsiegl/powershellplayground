@@ -42,6 +42,11 @@ Write-Output "Git Command: $gitCommand"
 # Extract the actual git command from the markdown-formatted response if necessary
 if (-not [string]::IsNullOrWhiteSpace($gitCommand)) {
     try {
+        #check if the $gitCommand starts with "git "
+        if (-not $gitCommand.StartsWith('git ', 'InvariantCultureIgnoreCase')) {
+            throw "The command must start with 'git '."
+        }
+        
         $gitOutput = bash -c "$gitCommand" 2>&1 | Out-String # Capture both stdout and stderr as a string
     } catch {
         Write-Error "Error executing git command: $_"
