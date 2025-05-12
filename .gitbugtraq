@@ -4,5 +4,5 @@
 
 [bugtraq]
   url = https://training.codebeamer.com/issue/%BUGID%
-  loglinkregex = "CB\\d+"
+  loglinkregex = "#\\d+"
   logregex = \\d+
