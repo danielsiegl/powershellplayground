@@ -7,29 +7,46 @@ Nötig: Python ≥3.9, pip install osmnx geopandas matplotlib shapely fiona
 import os
 import matplotlib.pyplot as plt
 import osmnx as ox
+ox.settings.overpass_endpoint = "https://overpass.osm.ch/api/interpreter"
 import geopandas as gpd
 from matplotlib.backends.backend_pdf import PdfPages
 from shapely.geometry import box
 import time
+import pandas as pd
 
-# 1. Bounding-Box & Download mit Retry-Loop
+# 1. Bounding-Box & Download in Chunks mit Retry-Loop
 bbox = (36.320, 20.116, 38.827, 25.225)  # south, west, north, east
+n_lat, w_lon, s_lat, e_lon = bbox
+n_chunks = 15  # number of chunks per axis (finer grid for smaller requests)
+
+lat_steps = [n_lat + (s_lat - n_lat) * i / n_chunks for i in range(n_chunks + 1)]
+lon_steps = [w_lon + (e_lon - w_lon) * i / n_chunks for i in range(n_chunks + 1)]
+
+all_edges = []
 max_retries = 5
 base_timeout = 60
-for attempt in range(1, max_retries + 1):
-    try:
-        print(f"Lade OSM-Straßennetz … (Versuch {attempt}, Timeout {base_timeout}s)")
-        G = ox.graph_from_bbox(*bbox, network_type="drive", timeout=base_timeout)
-        break
-    except Exception as e:
-        print(f"Fehler beim Laden (Versuch {attempt}): {e}")
-        if attempt == max_retries:
-            raise
-        base_timeout += 60  # Timeout für nächsten Versuch erhöhen
-        time.sleep(5)
 
-# 2. Umwandeln in GeoDataFrames
-edges = ox.graph_to_gdfs(G, nodes=False, edges=True)
+for i in range(n_chunks):
+    for j in range(n_chunks):
+        chunk_bbox = (
+            lat_steps[i], lon_steps[j], lat_steps[i+1], lon_steps[j+1]
+        )
+        for attempt in range(1, max_retries + 1):
+            try:
+                print(f"Lade Chunk {i+1},{j+1} … (Versuch {attempt}, Timeout {base_timeout}s)")
+                G_chunk = ox.graph_from_bbox(*chunk_bbox, network_type="drive", timeout=base_timeout)
+                edges_chunk = ox.graph_to_gdfs(G_chunk, nodes=False, edges=True)
+                all_edges.append(edges_chunk)
+                break
+            except Exception as e:
+                print(f"Fehler beim Laden Chunk {i+1},{j+1} (Versuch {attempt}): {e}")
+                if attempt == max_retries:
+                    raise
+                base_timeout += 60
+                time.sleep(5)
+
+# 2. Umwandeln in GeoDataFrames (Mergen aller Chunks)
+edges = gpd.GeoDataFrame(pd.concat(all_edges, ignore_index=True))
 
 # 3. PDF-Setup: 2 A4-Seiten quer (landscape)
 a4 = (11.69, 8.27)  # inch (ISO 216)
