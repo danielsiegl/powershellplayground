@@ -52,7 +52,7 @@ if (-not [string]::IsNullOrWhiteSpace($gitCommand)) {
         Write-Error "Error executing git command: $_"
     }
 } else {
-    throw "The git command is empty or invalid."
+    throw "The git command is empty or invalid."  
 }
 
 # if output is empty show a nice message    

@@ -6,7 +6,7 @@ Describe 'HoliDay Class' {
         # strange handling is required so it works in both environments
         # (VSCode and GitHub Actions)
         $paths = @(
-            "$PSScriptRoot/classes/holiday.ps1",
+            "$PSScriptRoot/classes/holiday.ps1",  
             "$PSScriptRoot/../classes/holiday.ps1"
         )
 
