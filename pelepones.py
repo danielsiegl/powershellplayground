@@ -41,15 +41,16 @@ if not os.path.exists(osm_xml_path):
         f"-o={osm_xml_path}"
     ], check=True)
 
-# 1. Lade Graph aus OSM XML (ohne network_type)
+print("Lade Graph aus OSM XML …")
 G = ox.graph_from_xml(osm_xml_path)
-
-# 2. Umwandeln in GeoDataFrames
+print("Graph geladen. Wandle in GeoDataFrames um …")
 edges = ox.graph_to_gdfs(G, nodes=False, edges=True)
+print(f"{len(edges)} Kanten geladen.")
 
 # 3. PDF-Setup: 2 A4-Seiten quer (landscape)
 a4 = (11.69, 8.27)  # inch (ISO 216)
 pdf_path = "peloponnese_map.pdf"
+print("Erzeuge PDF …")
 with PdfPages(pdf_path) as pdf:
     # Seite 1: Gesamtübersicht
     fig, ax = plt.subplots(figsize=a4)
@@ -63,6 +64,7 @@ with PdfPages(pdf_path) as pdf:
     # -> Fenster kleiner schneiden
     pelop_bbox = box(36.3, 21.8, 38.0, 24.2)
     pelop_edges = edges[edges.intersects(pelop_bbox)]
+    print(f"{len(pelop_edges)} Kanten im Detailfenster.")
     fig, ax = plt.subplots(figsize=a4)
     pelop_edges.plot(ax=ax, linewidth=0.25, color="black")
     ax.set_xlim(pelop_bbox.bounds[0], pelop_bbox.bounds[2])
