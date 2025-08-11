@@ -1,6 +1,6 @@
 # PowerShell Playground
 
-Welcome to the PowerShell Playground repository! This is a personal space dedicated to experimenting with PowerShell scripts, modules, and various automation tasks. Whether you're a seasoned PowerShell user or just starting out, this repository offers a variety of resources to explore and enhance your scripting skills.
+Welcome to the PowerShell Playground repository! This is a personal space dedicated to experimenting with PowerShell scripts, modules, and various automation tasks. Whether you're a seasoned PowerShell user or just starting out, this repository offers a variety of resources to explore and enhance your scripting skills. Just for learning!
 
 ## Table of Contents
 
